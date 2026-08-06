@@ -1,0 +1,33 @@
+.strip {
+  background: var(--light);
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 40px;
+}
+
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill::before {
+  content: "✓";
+  color: var(--green2);
+  font-weight: 700;
+}

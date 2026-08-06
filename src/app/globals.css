@@ -1,0 +1,101 @@
+/*
+  Design tokens consolidated from the source site. 14 of the 15 original
+  pages used this darker palette; only index.html used a lighter, slightly
+  different set of greens. The darker palette was adopted site-wide for
+  visual consistency — see DESIGN.md "Design token reconciliation".
+*/
+:root {
+  --navy: #1a3a2a;
+  --navy2: #2a5a3e;
+  --orange: #b05a3a;
+  --orange2: #c96a46;
+  --green: #3aaa6a;
+  /*
+    Darkened from the source's #2d9458 (3.83:1 on white — fails WCAG AA's
+    4.5:1 for normal text) to #268049 (4.92:1 on white). Same hue, just
+    dark enough to pass; every use of --green2 as text-on-light or
+    white-text-on-green2-background was auditted (contrast is symmetric)
+    and none of them sit on a dark background, so this is a safe global
+    change. See CHANGELOG.md "Accessibility: fix low-contrast green".
+  */
+  --green2: #268049;
+  --steel: #5a7a6a;
+  --light: #f6faf7;
+  --rule: #ddeae0;
+  --white: #ffffff;
+  --text: #1a2a20;
+  --muted: #3d5245;
+
+  --container-width: 1200px;
+  --header-height: 68px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text);
+  background: var(--white);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 1000;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green2);
+  outline-offset: 2px;
+}

@@ -1,0 +1,70 @@
+.strip {
+  background: #fff;
+  border-bottom: 2px solid var(--rule);
+  padding: 20px 40px;
+}
+
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.fields {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.field {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.field strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.field span {
+  color: var(--green2);
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.downloadBtn:hover {
+  background: var(--navy2);
+}
+
+.downloadBtn::before {
+  content: "↓";
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fields {
+    gap: 16px;
+  }
+}

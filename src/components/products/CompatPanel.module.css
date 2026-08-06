@@ -1,0 +1,42 @@
+.panel {
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.text p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  max-width: 520px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.link {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.18);
+}

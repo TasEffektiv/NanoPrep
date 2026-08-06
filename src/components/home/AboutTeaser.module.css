@@ -1,0 +1,142 @@
+.section {
+  background: var(--white);
+  padding: 96px 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.sectionTag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTag::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green);
+}
+
+.heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.content p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+.content p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green2);
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 8px;
+  transition: gap 0.2s;
+}
+
+.link:hover {
+  gap: 14px;
+}
+
+.link::after {
+  content: "→";
+}
+
+.visual {
+  position: relative;
+}
+
+.imageBlock {
+  border-radius: 4px;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  background: var(--light);
+}
+
+.badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-family: var(--font-head);
+  z-index: 2;
+}
+
+.badge span:first-child {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.badge span:last-child {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  /* opacity: 0.85 removed — dropped white-on-orange contrast to 3.94:1,
+     below WCAG AA's 4.5:1 for small text (see CHANGELOG.md). */
+}
+
+.processPhoto {
+  margin-top: 64px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.processPhoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

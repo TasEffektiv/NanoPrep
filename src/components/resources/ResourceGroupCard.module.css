@@ -1,0 +1,162 @@
+.group {
+  margin-bottom: 48px;
+}
+
+.group:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.header h2 {
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tag {
+  background: rgba(58, 170, 106, 0.12);
+  color: var(--green2);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+
+.row.lastRow {
+  border-bottom: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  transition: background 0.15s;
+}
+
+.item:hover {
+  background: var(--light);
+}
+
+.itemFirst {
+  border-right: 1px solid var(--rule);
+}
+
+.itemFull {
+  grid-column: 1 / -1;
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(58, 170, 106, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemIcon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--green2);
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.itemText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemText strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.itemSub {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green2);
+}
+
+.downloadBtn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.item:hover .downloadBtn {
+  border-color: var(--green2);
+  background: #fff;
+}
+
+.downloadBtn svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.item:hover .downloadBtn svg {
+  stroke: var(--green2);
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .itemFirst {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+}

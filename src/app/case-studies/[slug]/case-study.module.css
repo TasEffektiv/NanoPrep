@@ -1,0 +1,15 @@
+/*
+  The source markup put the sidebar contact panel directly below the
+  article, full width (no grid/flex was defined on .content-wrap) — that
+  single-column stacking is preserved here rather than introducing a new
+  two-column layout.
+*/
+.contentWrap {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 56px 40px;
+}
+
+.sidebar {
+  margin-top: 40px;
+}

@@ -1,0 +1,48 @@
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.featuredSection {
+  padding: 60px 40px 20px;
+}
+
+.section {
+  padding: 40px 40px 72px;
+}
+
+.sectionEyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

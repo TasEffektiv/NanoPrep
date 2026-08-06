@@ -1,0 +1,263 @@
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 40px;
+}
+
+.content h2 {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 36px 0 14px;
+  line-height: 1.2;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.content ul {
+  padding-left: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.content ul li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+.content ul li::marker {
+  color: var(--green);
+}
+
+.highlightBox {
+  background: var(--light);
+  border-left: 3px solid var(--green2);
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 24px 0;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.highlightBox strong {
+  color: var(--navy);
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.benefitCard {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 20px 22px;
+}
+
+.benefitCard.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.benefitCard h3 {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.benefitCard p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+.stepNum {
+  background: var(--light);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 0 0;
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green2);
+  border-right: 1px solid var(--rule);
+}
+
+.stepBody {
+  padding: 20px 22px;
+  background: #fff;
+}
+
+.stepBody h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.stepBody p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.65;
+}
+
+.docLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.docLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--light);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.docLink:hover {
+  border-color: var(--green2);
+  box-shadow: 0 2px 12px rgba(45, 148, 88, 0.1);
+}
+
+.docLinkIcon {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--green2);
+  flex-shrink: 0;
+  border: 1px solid var(--rule);
+}
+
+.docLinkText {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.docLinkText strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.videoGroup {
+  margin: 28px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+
+.videoGroupHeader {
+  padding: 14px 18px;
+  background: var(--light);
+  border-bottom: 1px solid var(--rule);
+}
+
+.videoGroupHeader h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.videoGrid {
+  display: grid;
+  gap: 2px;
+  background: #e0e0e0;
+  padding: 2px;
+}
+
+.videoTile {
+  background: #1a1a2e;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.videoPlayIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(200, 0, 0, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  padding-left: 4px;
+}
+
+.videoTile .videoLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.videoTile p {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .benefitGrid,
+  .docLinks {
+    grid-template-columns: 1fr;
+  }
+}

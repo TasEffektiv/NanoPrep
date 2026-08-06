@@ -1,0 +1,26 @@
+.strip {
+  background: #fff;
+  border-bottom: 2px solid var(--rule);
+  padding: 18px 40px;
+}
+
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.field {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.field strong {
+  font-weight: 600;
+}
+
+.field span {
+  color: var(--green2);
+}

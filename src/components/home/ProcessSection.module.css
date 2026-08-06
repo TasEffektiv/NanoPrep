@@ -1,0 +1,160 @@
+.section {
+  background: var(--light);
+  padding: 96px 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.sectionTag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTag::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green);
+}
+
+.heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.intro {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: white;
+  padding: 36px 32px;
+  transition: background 0.2s;
+}
+
+.card:hover {
+  background: #fafcff;
+}
+
+.cardIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  background: rgba(58, 170, 106, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cardIcon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.card h3 {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+
+.spec {
+  padding: 28px;
+  border-right: 1px solid var(--rule);
+}
+
+.spec:last-child {
+  border-right: none;
+}
+
+.specLabel {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.specValue {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 100;
+  color: var(--navy);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .cards,
+  .specs {
+    grid-template-columns: 1fr;
+  }
+
+  .spec {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .spec:last-child {
+    border-bottom: none;
+  }
+}

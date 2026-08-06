@@ -1,0 +1,157 @@
+.section {
+  padding: 64px 40px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.introRow {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.introMedia {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.introBadge {
+  padding: 24px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.introBadge img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.introMedia > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.intro p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.intro p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.statsStrip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 36px 0;
+}
+
+.stat {
+  background: #fff;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.statNum {
+  font-family: var(--font-head);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--green2);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heritagePanel {
+  background: var(--light);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 36px 40px;
+  margin: 36px 0;
+}
+
+.heritagePanel h2 {
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.heritagePanel p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.heritagePanel p:last-child {
+  margin-bottom: 0;
+}
+
+.closingPanel {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+}
+
+.closingPanel h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+  flex: 1;
+  min-width: 260px;
+}
+
+.closingCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.closingCta:hover {
+  background: var(--orange2);
+}
+
+.closingCta::after {
+  content: "→";
+}
+
+@media (max-width: 760px) {
+  .introRow {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

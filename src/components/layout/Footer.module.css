@@ -1,0 +1,151 @@
+.footer {
+  background: var(--navy);
+  border-top: 2px solid var(--green);
+  padding: 48px 40px 28px;
+}
+
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.brand img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 14px;
+}
+
+.brand p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 260px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.social a {
+  display: flex;
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.social a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactList li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contactLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 2px;
+}
+
+.contactList a,
+.contactList span {
+  color: #fff;
+}
+
+.contactList a:hover {
+  color: var(--green);
+}
+
+.col h2 {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+
+.col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.col ul a,
+.col ul span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s;
+}
+
+.col ul a:hover {
+  color: var(--green);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLinks a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+
+.bottomLinks a:hover {
+  color: var(--green);
+}
+
+@media (max-width: 1000px) {
+  .inner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,94 @@
+.header {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
+  padding: 52px 40px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--green);
+}
+
+.headerInner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.tagMedia,
+.tagCategory {
+  background: rgba(58, 170, 106, 0.15);
+  border: 1px solid rgba(58, 170, 106, 0.3);
+  color: var(--green);
+}
+
+.title {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.08;
+  max-width: 840px;
+}
+
+.byline {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.byline strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.contentWrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 52px 40px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green2);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 30px;
+  transition: gap 0.2s;
+}
+
+.backLink:hover {
+  gap: 12px;
+}
+
+.backLink::before {
+  content: "←";
+}

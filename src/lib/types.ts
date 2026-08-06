@@ -1,0 +1,56 @@
+/** Shared "rich content" block model used by product and case-study detail pages. */
+
+export interface BenefitItem {
+  title: string;
+  text: string;
+  fullWidth?: boolean;
+}
+
+export interface StepItem {
+  title: string;
+  text: string;
+}
+
+export interface DocLinkItem {
+  label: string;
+  sub: string;
+  href: string;
+}
+
+export interface VideoItem {
+  label: string;
+}
+
+export type ContentBlock =
+  | { type: "heading"; text: string }
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "highlight"; lead?: string; text: string }
+  | { type: "benefitGrid"; items: BenefitItem[] }
+  | { type: "steps"; items: StepItem[] }
+  | { type: "docLinks"; items: DocLinkItem[] }
+  | { type: "videoGroup"; heading: string; videos: VideoItem[] };
+
+export interface GalleryImage {
+  caption: string;
+  src?: string;
+  alt?: string;
+}
+
+export type ArticleBlock =
+  | { type: "heading"; text: string }
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "highlight"; text: string }
+  | { type: "articleImage"; src: string; alt: string; caption?: string }
+  | {
+      type: "imageGroup";
+      variant: "before" | "during" | "after";
+      badgeLabel: string;
+      heading: string;
+      images: GalleryImage[];
+    }
+  | { type: "photoGallery"; images: { src: string; alt: string }[]; caption: string }
+  | { type: "inlineVideo"; heading: string; label: string; caption: string }
+  | { type: "featuredVideo"; label: string; caption: string }
+  | { type: "specTable"; rows: { label: string; value: string }[] };

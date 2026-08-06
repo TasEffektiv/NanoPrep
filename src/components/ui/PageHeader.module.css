@@ -1,0 +1,81 @@
+.header {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
+  padding: 56px 40px 52px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--green);
+  z-index: 3;
+}
+
+.headerPhoto {
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.headerPhoto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 35%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 85%);
+}
+
+.bgImage {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.inner h1 {
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.inner h1 span {
+  color: var(--green);
+}
+
+.sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 560px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 640px) {
+  .headerPhoto {
+    min-height: 460px;
+  }
+}

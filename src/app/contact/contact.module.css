@@ -1,0 +1,145 @@
+.section {
+  padding: 64px 40px 96px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.cardIcon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--orange);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card h3 {
+  font-family: var(--font-head);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card p a {
+  color: var(--muted);
+}
+
+.card p a:hover {
+  color: var(--green2);
+}
+
+.formPanel {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  margin-bottom: 56px;
+}
+
+.offices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.office h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.officeAddress {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.officeLine {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.officeLine:hover {
+  color: var(--green2);
+}
+
+.map {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  aspect-ratio: 4 / 3;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.directions {
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green2);
+}
+
+.directions:hover {
+  color: var(--green);
+}
+
+@media (max-width: 880px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .formPanel {
+    padding: 28px;
+  }
+
+  .offices {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

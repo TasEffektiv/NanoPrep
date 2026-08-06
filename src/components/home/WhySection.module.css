@@ -1,0 +1,145 @@
+.section {
+  background: white;
+  padding: 96px 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sectionTag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTag::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green);
+}
+
+.heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+}
+
+.point {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  gap: 24px;
+}
+
+.point:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.pointNum {
+  font-family: var(--font-head);
+  font-size: 36px;
+  font-weight: 700;
+  color: #c8e0d0;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+}
+
+.pointContent h3 {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.pointContent p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.visual {
+  /* Intentionally the original homepage's lighter sage-green gradient
+     (#486e58 -> #5a8a6e), not the site-wide --navy/--navy2 tokens — this
+     card was the one place the lighter original palette was kept. */
+  background: linear-gradient(145deg, #486e58 0%, #5a8a6e 100%);
+  border-radius: 6px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.quote {
+  position: relative;
+  z-index: 1;
+}
+
+.quoteMark {
+  font-family: var(--font-head);
+  font-size: 80px;
+  line-height: 0.7;
+  color: var(--orange);
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+.quote p {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.quoteSource {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

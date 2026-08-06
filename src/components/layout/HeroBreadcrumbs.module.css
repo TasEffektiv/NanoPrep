@@ -1,0 +1,29 @@
+.breadcrumb {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.inner {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.inner a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.15s;
+}
+
+.inner a:hover {
+  color: #fff;
+}
+
+.current {
+  color: rgba(255, 255, 255, 0.7);
+}

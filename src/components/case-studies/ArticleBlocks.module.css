@@ -1,0 +1,139 @@
+.article h2 {
+  font-family: var(--font-head);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 32px 0 12px;
+  line-height: 1.2;
+}
+
+.article h2:first-child {
+  margin-top: 0;
+}
+
+.article p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.article ul {
+  padding-left: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.article ul li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+.article ul li::marker {
+  color: var(--green);
+}
+
+.highlight {
+  background: var(--light);
+  border-left: 3px solid var(--green);
+  padding: 16px 20px;
+  border-radius: 0 6px 6px 0;
+  margin: 20px 0;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.articleFigure {
+  margin: 24px 0;
+}
+
+.articleImg {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  position: relative;
+  height: 280px;
+}
+
+.articleImg img {
+  object-fit: cover;
+}
+
+.articleCaption {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.photoGalleryFigure {
+  margin: 24px 0;
+}
+
+.photoGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.photoGalleryItem {
+  position: relative;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+
+.photoGalleryItem img {
+  object-fit: cover;
+}
+
+.photoGalleryFigure .articleCaption {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .photoGallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.specTable thead th {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.specTable tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+  vertical-align: top;
+}
+
+.specTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.specTable tbody td:first-child {
+  color: var(--text);
+  font-weight: 500;
+  width: 40%;
+}

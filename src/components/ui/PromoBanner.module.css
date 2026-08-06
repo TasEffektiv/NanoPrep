@@ -1,0 +1,105 @@
+.panel {
+  /* Matches the "Why NanoPrep" quote card / Contact section — original
+     homepage's lighter sage-green gradient (#486e58 -> #5a8a6e), not the
+     site-wide --navy. */
+  background: linear-gradient(145deg, #486e58 0%, #5a8a6e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 32px 40px;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  pointer-events: none;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green);
+}
+
+.text h3 {
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.text p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: var(--orange2);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 28px;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

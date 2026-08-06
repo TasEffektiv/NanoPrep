@@ -1,0 +1,137 @@
+.card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.image {
+  background: linear-gradient(135deg, #c8dac8, #9ab89a);
+  min-height: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  padding: 16px 20px;
+  border-radius: 6px;
+}
+
+.imagePlaceholder span {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--green2);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.body {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.body h2 {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--green2);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.body p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.featureList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.featureList li {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--light);
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.featureList li::before {
+  content: "✓";
+  color: var(--green2);
+  font-weight: 700;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 4px;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.cta:hover {
+  background: var(--orange2);
+}
+
+.cta::after {
+  content: "→";
+}
+
+@media (max-width: 800px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    min-height: 200px;
+  }
+}
