@@ -19,7 +19,7 @@ export default function Header() {
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={`${siteConfig.name} home`} prefetch={false}>
-          <Image src={siteConfig.logo} alt={siteConfig.name} width={85} height={40} priority />
+          <Image src={siteConfig.logo} alt={siteConfig.name} width={191} height={90} priority />
         </Link>
 
         <ul className={styles.links}>

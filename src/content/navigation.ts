@@ -53,7 +53,7 @@ export const caseStudiesDropdown: NavDropdown = {
 };
 
 export const primaryNav: NavLink[] = [
-  { label: "Home", href: "/" },
+
   { label: "About NanoPrep", href: "/about" },
 ];
 
