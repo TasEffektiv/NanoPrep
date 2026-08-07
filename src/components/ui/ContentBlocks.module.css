@@ -13,6 +13,25 @@
   line-height: 1.2;
 }
 
+.headingRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+  margin: 36px 0 14px;
+}
+
+.headingRow h2 {
+  margin: 0;
+}
+
+.headingLogo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
 .content h2:first-child {
   margin-top: 0;
 }

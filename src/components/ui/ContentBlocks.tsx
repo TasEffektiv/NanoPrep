@@ -1,4 +1,5 @@
 import type { ContentBlock } from "@/lib/types";
+import Image from "next/image";
 import styles from "./ContentBlocks.module.css";
 import CtaPanel from "./CtaPanel";
 
@@ -25,7 +26,21 @@ export default function ContentBlocks({
 
         switch (block.type) {
           case "heading":
-            return <h2 key={key}>{block.text}</h2>;
+            return (
+              <div key={key} className={styles.headingRow}>
+                <h2>{block.text}</h2>
+                {block.text === "A new class of coating" && (
+                  <div className={styles.headingLogo}>
+                    <Image
+                      src="/images/Products/nanoprep-logo-tag.png"
+                      alt="NanoPrep logo"
+                      width={120}
+                      height={65}
+                    />
+                  </div>
+                )}
+              </div>
+            );
 
           case "paragraph":
             return <p key={key}>{block.text}</p>;
