@@ -7,7 +7,6 @@ export default function HomeHero() {
       <video
         className={styles.bgVideo}
         src="/videos/herovideo.mp4"
-        poster="/images/landingpage.webp"
         autoPlay
         muted
         loop
@@ -16,7 +15,6 @@ export default function HomeHero() {
         aria-hidden="true"
       />
       <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.tag}>Corrosion Protection Technology</div>
         <h1>

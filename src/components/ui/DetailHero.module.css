@@ -73,14 +73,13 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(26, 58, 42, 0.5) 0%, rgba(26, 58, 42, 0.7) 100%);
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.28) 45%, rgba(0, 0, 0, 0.08) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 60%);
   display: flex;
   align-items: flex-end;
   padding: 56px 40px 52px;
-}
-
-.overlayPhoto {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 35%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 85%);
+  pointer-events: none;
 }
 
 .content {

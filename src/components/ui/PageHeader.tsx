@@ -21,6 +21,7 @@ export default function PageHeader({
   return (
     <div className={`${styles.header} ${image ? styles.headerPhoto : ""}`}>
       {image && <Image src={image.src} alt={image.alt} fill priority sizes="100vw" className={styles.bgImage} />}
+      <div className={styles.overlay} />
       <div className={styles.inner}>
         {breadcrumbs && <HeroBreadcrumbs items={breadcrumbs} />}
         <div className={styles.eyebrow}>{eyebrow}</div>

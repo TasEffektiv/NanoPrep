@@ -5,29 +5,19 @@
   overflow: hidden;
 }
 
-.header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: var(--green);
-  z-index: 3;
-}
-
 .headerPhoto {
   min-height: 600px;
   display: flex;
   align-items: flex-end;
 }
 
-.headerPhoto::before {
-  content: "";
+.overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 35%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 85%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.08) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 60%);
+  pointer-events: none;
 }
 
 .bgImage {
