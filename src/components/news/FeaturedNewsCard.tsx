@@ -8,7 +8,7 @@ export default function FeaturedNewsCard({ item }: { item: NewsItem }) {
     <article className={styles.card}>
       <div className={styles.media}>
         {item.image && (
-          <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 900px) 50vw, 100vw" />
+          <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 900px) 50vw, 100vw" className={styles.cover} />
         )}
       </div>
       <div className={styles.body}>

@@ -8,7 +8,7 @@ export default function NewsCard({ item }: { item: NewsItem }) {
     <Link href={item.href} className={styles.card}>
       <div className={styles.image}>
         {item.image ? (
-          <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 900px) 33vw, 100vw" />
+          <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 900px) 33vw, 100vw" className={styles.cover} />
         ) : (
           <div className={styles.placeholderIcon} aria-hidden="true">
             <svg viewBox="0 0 24 24">
