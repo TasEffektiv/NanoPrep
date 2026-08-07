@@ -10,6 +10,7 @@ export default function DetailHero({
   image,
   tagImage,
   breadcrumbs,
+  style,
 }: {
   tag: string;
   title: string;
@@ -17,9 +18,10 @@ export default function DetailHero({
   image?: { src: string; alt: string };
   tagImage?: { src: string; alt: string; width: number; height: number };
   breadcrumbs?: Crumb[];
+  style?: React.CSSProperties;
 }) {
   return (
-    <div className={`${styles.hero} ${image ? styles.heroPhoto : ""}`}>
+    <div style={style} className={`${styles.hero} ${image ? styles.heroPhoto : ""}`}>
       {image ? (
         <Image src={image.src} alt={image.alt} fill priority sizes="100vw" className={styles.bgImage} />
       ) : (

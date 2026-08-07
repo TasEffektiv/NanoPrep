@@ -35,12 +35,12 @@ export default async function ProductDetailPage({ params }: { params: Params }) 
         title={product.heroTitle}
         sub={product.heroSub}
         image={product.heroImage}
-        tagImage={product.heroTagImage}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },
           { label: product.breadcrumbLabel },
         ]}
+        style={product.slug === "nanoprep" ? { minHeight: 300, height: 300 } : undefined}
       />
       <FeatureStrip items={product.featurePills} />
       <ContentBlocks blocks={product.blocks} cta={product.cta} />
