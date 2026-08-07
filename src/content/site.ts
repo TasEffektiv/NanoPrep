@@ -7,10 +7,10 @@ export const siteConfig = {
   logo: "/images/logo.webp",
   logoWhite: "/images/nanoprep-logo-white.webp",
   social: {
-    facebook: "#",
-    instagram: "#",
-    linkedin: "#",
-    youtube: "#",
+    facebook: "https://www.facebook.com/rezitechservices",
+    instagram: "https://www.instagram.com/rezitechservices/",
+    linkedin: "https://au.linkedin.com/company/rezitech-services-pty-ltd",
+    youtube: "https://www.youtube.com/@rezitechservices1219",
   },
   builtBy: {
     name: "EffektivWeb",
