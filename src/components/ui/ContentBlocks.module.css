@@ -19,6 +19,12 @@
   margin: 36px 0 14px;
 }
 
+.imageBlock {
+  margin: 24px 0 8px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .headingLogo {
   display: flex;
   justify-content: flex-start;

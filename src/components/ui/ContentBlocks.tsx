@@ -57,6 +57,18 @@ export default function ContentBlocks({
               </ul>
             );
 
+          case "image":
+            return (
+              <div key={key} className={styles.imageBlock}>
+                <Image
+                  src={block.src}
+                  alt={block.alt}
+                  width={block.width}
+                  height={block.height}
+                />
+              </div>
+            );
+
           case "highlight":
             return <div key={key}>{renderHighlight(block.text, block.lead)}</div>;
 

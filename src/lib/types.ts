@@ -25,6 +25,7 @@ export type ContentBlock =
   | { type: "heading"; text: string }
   | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] }
+  | { type: "image"; src: string; alt: string; width: number; height: number }
   | { type: "highlight"; lead?: string; text: string }
   | { type: "benefitGrid"; items: BenefitItem[] }
   | { type: "steps"; items: StepItem[] }
