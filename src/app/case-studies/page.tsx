@@ -20,6 +20,7 @@ export default function CaseStudiesPage() {
         sub="Real-world applications of NanoPrep across industry — corrosion protection without blasting, in the environments where it matters most."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Case Studies" }]}
         image={{ src: "/images/case-studies/Case studies.jpg", alt: "Corroded structural steel beams coated red" }}
+        style={{ minHeight: 300, height: 300 }}
       />
       <IndustryFilter caseStudies={caseStudies} />
     </>
