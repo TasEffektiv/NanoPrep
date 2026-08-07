@@ -10,6 +10,7 @@ export default function PageHeader({
   sub,
   breadcrumbs,
   image,
+  style,
 }: {
   eyebrow: string;
   title: string;
@@ -17,9 +18,10 @@ export default function PageHeader({
   sub: string;
   breadcrumbs?: Crumb[];
   image?: { src: string; alt: string };
+  style?: React.CSSProperties;
 }) {
   return (
-    <div className={`${styles.header} ${image ? styles.headerPhoto : ""}`}>
+    <div style={style} className={`${styles.header} ${image ? styles.headerPhoto : ""}`}>
       {image && <Image src={image.src} alt={image.alt} fill priority sizes="100vw" className={styles.bgImage} />}
       <div className={styles.overlay} />
       <div className={styles.inner}>

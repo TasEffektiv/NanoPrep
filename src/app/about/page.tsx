@@ -21,6 +21,8 @@ export default function AboutPage() {
         highlight="NanoPrep"
         sub="NanoPrep is manufactured and distributed by Rezitech, an Australian-owned company with more than 50 years of experience in industrial maintenance and protective coatings."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About NanoPrep" }]}
+        image={{ src: "/images/about/About us banner.png", alt: "About us banner" }}
+        style={{ minHeight: 300, height: 300 }}
       />
 
       <section className={styles.section}>
