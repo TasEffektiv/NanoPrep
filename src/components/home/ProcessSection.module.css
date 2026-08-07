@@ -75,8 +75,8 @@
 }
 
 .cardIcon {
-  width: 56px;
-  height: 56px;
+  width: 92px;
+  height: 92px;
   border-radius: 6px;
   background: rgba(58, 170, 106, 0.08);
   display: flex;
@@ -86,9 +86,25 @@
 }
 
 .cardIcon img {
-  width: 36px;
-  height: 36px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
+}
+
+.iconStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.iconStack .cardIcon {
+  margin-bottom: 0;
+}
+
+.iconStack img {
+  width: 80px;
+  height: 80px;
 }
 
 .card h3 {

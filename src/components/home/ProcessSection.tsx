@@ -10,12 +10,16 @@ const steps = [
   {
     title: "Step 2 — NanoPrep Application",
     text: "NanoPrep is easily applied by spray, brush or roller, providing flexible, efficient coverage across a wide range of surfaces.",
-    icon: "/images/icons/spray-gun.svg",
+    icons: [
+      "/images/icons/spray-gun.svg",
+      "/images/icons/brush.svg",
+      "/images/icons/paint-roller.svg",
+    ],
   },
   {
     title: "Step 3 — Topcoat Application",
     text: "NanoPrep delivers outstanding adhesion with leading low- and non-solvent topcoats, achieving up to 70–80% of grit-blasted adhesion performance at a fraction of the surface preparation cost.",
-    icon: "/images/icons/paint-roller.svg",
+    icon: "/images/icons/shield.svg",
   },
 ];
 
@@ -43,9 +47,19 @@ export default function ProcessSection() {
         <div className={styles.cards}>
           {steps.map((step) => (
             <div key={step.title} className={styles.card}>
-              <div className={styles.cardIcon}>
-                <Image src={step.icon} alt="" width={28} height={28} aria-hidden="true" />
-              </div>
+              {step.icons ? (
+                <div className={styles.iconStack}>
+                  {step.icons.map((icon) => (
+                    <div key={icon} className={styles.cardIcon}>
+                      <Image src={icon} alt="" width={24} height={24} aria-hidden="true" />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className={styles.cardIcon}>
+                  <Image src={step.icon} alt="" width={28} height={28} aria-hidden="true" />
+                </div>
+              )}
               <h3>{step.title}</h3>
               <p>{step.text}</p>
             </div>
