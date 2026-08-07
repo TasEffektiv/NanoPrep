@@ -72,6 +72,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className={styles.introMedia}>
+              <Image
+                src="/images/about/NanoPrep.jpg"
+                alt="NanoPrep applied by spray to the roof of a large steel storage tank"
+                width={1063}
+                height={1121}
+              />
               <div className={styles.introBadge}>
                 <Image
                   src="/images/about/Authorised Distributor Belzona.png"
@@ -80,12 +86,6 @@ export default function AboutPage() {
                   height={1010}
                 />
               </div>
-              <Image
-                src="/images/about/NanoPrep.jpg"
-                alt="NanoPrep applied by spray to the roof of a large steel storage tank"
-                width={1063}
-                height={1121}
-              />
             </div>
           </div>
 
