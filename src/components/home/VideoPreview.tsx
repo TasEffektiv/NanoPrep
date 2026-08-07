@@ -1,12 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./VideoPreview.module.css";
 
-/**
- * These 3 videos have embedding disabled by the channel owner (YouTube
- * error 153 in an <iframe> player), confirmed by testing an embed — so
- * cards link out to youtube.com instead of embedding a player that would
- * show that error to every visitor. Thumbnails are pulled from YouTube's
- * own img CDN, which works regardless of the embedding restriction.
- */
 const videos = [
   { id: "KIufIJzbkhs", title: "NanoPrep Application" },
   { id: "z_5tWCCmnxw", title: "Water Tank Corrosion Protection Without Blasting" },
@@ -14,6 +10,23 @@ const videos = [
 ];
 
 export default function VideoPreview() {
+  const [activeVideo, setActiveVideo] = useState<(typeof videos)[number] | null>(null);
+
+  useEffect(() => {
+    if (!activeVideo) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActiveVideo(null);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [activeVideo]);
+
   return (
     <section className={styles.section} id="video">
       <div className={styles.container}>
@@ -24,32 +37,49 @@ export default function VideoPreview() {
         </p>
         <div className={styles.grid}>
           {videos.map((video) => (
-            <a
+            <button
               key={video.id}
-              href={`https://www.youtube.com/watch?v=${video.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              type="button"
               className={styles.card}
+              onClick={() => setActiveVideo(video)}
+              aria-label={`Play video: ${video.title}`}
             >
               <div className={styles.thumb}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt="" loading="lazy" />
                 <div className={styles.overlay} />
-                <span className={styles.watchLabel}>
-                  <span className={styles.playIcon} aria-hidden="true">
-                    ▶
-                  </span>
-                  Watch on YouTube
-                </span>
                 <span className={styles.playBadge} aria-hidden="true">
                   ▶
                 </span>
               </div>
               <div className={styles.titleBar}>{video.title}</div>
-            </a>
+            </button>
           ))}
         </div>
       </div>
+
+      {activeVideo && (
+        <div className={styles.modalBackdrop} onClick={() => setActiveVideo(null)}>
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className={styles.modalClose}
+              onClick={() => setActiveVideo(null)}
+              aria-label="Close video"
+            >
+              ✕
+            </button>
+            <div className={styles.modalPlayer}>
+              <iframe
+                src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1`}
+                title={activeVideo.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
