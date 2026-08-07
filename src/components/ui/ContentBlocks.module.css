@@ -9,26 +9,18 @@
   font-size: 28px;
   font-weight: 600;
   color: var(--navy);
-  margin: 36px 0 14px;
+  margin: 0;
   line-height: 1.2;
 }
 
-.headingRow {
+.headingBlock {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: flex-start;
-  gap: 18px;
-  position: relative;
+  gap: 14px;
   margin: 36px 0 14px;
-}
-
-.headingRow h2 {
-  margin: 0;
 }
 
 .headingLogo {
   display: flex;
-  align-items: flex-start;
   justify-content: flex-end;
 }
 
