@@ -44,6 +44,9 @@ const points = [
 ];
 
 export default function WhySection() {
+  const leftPoints = points.slice(0, 5);
+  const rightPoints = points.slice(5);
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -51,17 +54,32 @@ export default function WhySection() {
         <h2 className={styles.heading}>The case for a different approach</h2>
         <div className={styles.grid}>
           <div className={styles.points}>
-            {points.map((point, index) => (
-              <div key={point.title} className={styles.point}>
-                <div className={styles.pointNum} aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
+            <div className={styles.column}>
+              {leftPoints.map((point, index) => (
+                <div key={point.title} className={styles.point}>
+                  <div className={styles.pointNum} aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div className={styles.pointContent}>
+                    <h3>{point.title}</h3>
+                    <p>{point.text}</p>
+                  </div>
                 </div>
-                <div className={styles.pointContent}>
-                  <h3>{point.title}</h3>
-                  <p>{point.text}</p>
+              ))}
+            </div>
+            <div className={styles.column}>
+              {rightPoints.map((point, index) => (
+                <div key={point.title} className={styles.point}>
+                  <div className={styles.pointNum} aria-hidden="true">
+                    {String(index + 6).padStart(2, "0")}
+                  </div>
+                  <div className={styles.pointContent}>
+                    <h3>{point.title}</h3>
+                    <p>{point.text}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           <div className={styles.visual}>
             <div className={styles.quote}>
