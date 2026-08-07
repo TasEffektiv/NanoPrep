@@ -29,11 +29,7 @@ export default function ContentBlocks({
             return (
               <div
                 key={key}
-                className={
-                  block.text === "A new class of coating"
-                    ? `${styles.headingBlock} ${styles.headingBlockRight}`
-                    : styles.headingBlock
-                }
+                className={styles.headingBlock}
               >
                 {block.text === "A new class of coating" && (
                   <div className={styles.headingLogo}>
