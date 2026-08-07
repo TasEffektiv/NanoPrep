@@ -40,7 +40,7 @@ export default function AboutTeaser() {
 
         <div className={styles.processPhoto}>
           <Image
-            src="/images/NanoPrep Just Pressure Wash and Coat.jpg"
+            src="/images/NanoPrep Just Pressure Wash and Coat 2.png"
             alt="NanoPrep surface preparation — pressure washing rusted steel, then spray-coating with NanoPrep"
             width={1024}
             height={205}
