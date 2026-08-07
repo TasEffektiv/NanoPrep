@@ -27,7 +27,14 @@ export default function ContentBlocks({
         switch (block.type) {
           case "heading":
             return (
-              <div key={key} className={styles.headingBlock}>
+              <div
+                key={key}
+                className={
+                  block.text === "A new class of coating"
+                    ? `${styles.headingBlock} ${styles.headingBlockRight}`
+                    : styles.headingBlock
+                }
+              >
                 {block.text === "A new class of coating" && (
                   <div className={styles.headingLogo}>
                     <Image

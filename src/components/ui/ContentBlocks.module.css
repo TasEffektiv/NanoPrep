@@ -19,6 +19,11 @@
   margin: 36px 0 14px;
 }
 
+.headingBlockRight {
+  justify-items: end;
+  text-align: right;
+}
+
 .headingLogo {
   display: flex;
   justify-content: flex-end;
