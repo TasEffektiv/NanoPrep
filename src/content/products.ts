@@ -137,6 +137,13 @@ export const products: Product[] = [
       "Mid-gloss waterbased industrial topcoat — the approved finishing system for NanoPrep, providing long-term UV and corrosion protection.",
     featurePills: ["UV Stable", "Waterbased", "Single Pack", "Mid Gloss", "Approved Topcoat for NanoPrep"],
     blocks: [
+      {
+        type: "image",
+        src: "/images/Products/rezitech-r230-topcoat.png",
+        alt: "R230 TopCoat logo",
+        width: 252,
+        height: 90,
+      },
       { type: "heading", text: "A waterbased topcoat, purpose-built for NanoPrep" },
       {
         type: "paragraph",
