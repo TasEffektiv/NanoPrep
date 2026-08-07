@@ -28,7 +28,7 @@ export const products: Product[] = [
     metaDescription:
       "NanoPrep is a waterborne primer that chemically reacts with rusted, painted and bare steel — eliminating the need for abrasive blasting.",
     breadcrumbLabel: "NanoPrep Rust Primer & Anticorrosive Coating",
-    cardTag: "Step 1 — Primer",
+    cardTag: "ANTICORROSIVE COATING",
     cardName: "NanoPrep",
     cardSubtitle: "Rust Primer & Anticorrosive Coating",
     cardSummary:
@@ -118,7 +118,7 @@ export const products: Product[] = [
     metaDescription:
       "ReziSafe R230 TopCoat is the approved mid-gloss, waterbased finishing system for NanoPrep, providing long-term UV and corrosion protection.",
     breadcrumbLabel: "NanoPrep R230 TopCoat",
-    cardTag: "Step 2 — Topcoat",
+    cardTag: "TOPCOAT",
     cardName: "R230 TopCoat",
     cardSubtitle: "Mid Gloss Waterbased Industrial Topcoat",
     cardSummary:
@@ -214,9 +214,9 @@ export const products: Product[] = [
     breadcrumbLabel: "Belzona 1111 (Super Metal)",
     cardTag: "Metal Repair",
     cardName: "Belzona",
-    cardSubtitle: "Repair Composite Materials and Protective Coatings",
+    cardSubtitle: "Composite Metal Repair and Rebuilding Solutions",
     cardSummary:
-      "Belzona protective coatings help preserve assets and extend their service life by rebuilding and protecting damaged machinery and equipment. They provide durable resistance to chemical attack, continuous immersion and other demanding industrial environments.",
+      "Belzona metal repair composites restore worn, corroded and damaged assets without welding or other hot work. Applied and cured in situ, they rebuild lost metal, restore original profiles and provide durable resistance to corrosion, erosion, impact and chemical attack.",
     cardFeatures: ["No Hot Work", "In-Situ Repair", "Machinable Finish", "Long-Term Protection"],
     cardHref: "https://rezitech.com.au/products/belzona-protective-coatings/",
     cardImage: { src: "/images/Products/Belzona.jpg", alt: "Belzona 1111 being applied to repair corroded structural steel" },
