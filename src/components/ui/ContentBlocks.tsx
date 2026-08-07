@@ -36,8 +36,8 @@ export default function ContentBlocks({
                     <Image
                       src="/images/Products/nanoprep-logo-tag.png"
                       alt="NanoPrep logo"
-                      width={120}
-                      height={65}
+                      width={144}
+                      height={78}
                     />
                   </div>
                 )}
