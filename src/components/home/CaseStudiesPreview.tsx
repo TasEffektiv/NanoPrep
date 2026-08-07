@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getCaseStudy } from "@/content/caseStudies";
 import styles from "./CaseStudiesPreview.module.css";
@@ -52,19 +53,23 @@ export default function CaseStudiesPreview() {
             if (!item) return null;
             const { caseStudy, summary } = item;
             return (
-              <div key={caseStudy.slug} className={styles.card}>
+              <Link key={caseStudy.slug} href={`/case-studies/${caseStudy.slug}`} className={styles.card}>
                 <div className={styles.image}>
-                  <span className={styles.placeholderText}>Image Placeholder</span>
+                  <Image
+                    src={caseStudy.listImage.src}
+                    alt={caseStudy.listImage.alt}
+                    fill
+                    sizes="(min-width: 900px) 20vw, 100vw"
+                    className={styles.thumbnail}
+                  />
                   <span className={styles.tag}>{caseStudy.industryLabel}</span>
                 </div>
                 <div className={styles.content}>
                   <h3>{caseStudy.title}</h3>
                   <p>{summary}</p>
-                  <Link href={`/case-studies/${caseStudy.slug}`} className={styles.link}>
-                    Read case study
-                  </Link>
+                  <span className={styles.link}>Read case study</span>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
