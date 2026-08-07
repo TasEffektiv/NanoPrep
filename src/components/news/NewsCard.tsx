@@ -5,7 +5,7 @@ import styles from "./NewsCard.module.css";
 
 export default function NewsCard({ item }: { item: NewsItem }) {
   return (
-    <div className={styles.card}>
+    <Link href={item.href} className={styles.card}>
       <div className={styles.image}>
         {item.image ? (
           <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 900px) 33vw, 100vw" />
@@ -24,10 +24,8 @@ export default function NewsCard({ item }: { item: NewsItem }) {
       <div className={styles.content}>
         <h3>{item.title}</h3>
         <p>{item.excerpt}</p>
-        <Link href={item.href} className={styles.link}>
-          Read more
-        </Link>
+        <span className={styles.link}>Read more</span>
       </div>
-    </div>
+    </Link>
   );
 }
