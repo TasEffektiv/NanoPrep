@@ -21,6 +21,8 @@ export default function ProductsPage() {
         highlight="Products"
         sub="A complete corrosion protection system — from surface preparation to long-term UV and weather resistance — without the cost and disruption of abrasive blasting."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products" }]}
+        image={{ src: "/images/about/About us banner.png", alt: "About us banner" }}
+        style={{ minHeight: 300, height: 300 }}
       />
       <section className={styles.section}>
         <div className={styles.inner}>
