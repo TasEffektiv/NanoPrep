@@ -5,7 +5,7 @@ import styles from "./CaseStudyCard.module.css";
 
 export default function CaseStudyCard({ caseStudy, compact = false }: { caseStudy: CaseStudy; compact?: boolean }) {
   return (
-    <div className={styles.card}>
+    <Link href={`/case-studies/${caseStudy.slug}`} className={styles.card}>
       <div className={`${styles.imageWrap} ${compact ? styles.imageCompact : styles.image}`}>
         <Image
           src={caseStudy.listImage.src}
@@ -19,10 +19,8 @@ export default function CaseStudyCard({ caseStudy, compact = false }: { caseStud
         {compact && <div className={`${styles.tag} ${styles.tagCompact}`}>{caseStudy.industryLabel}</div>}
         <h3>{caseStudy.title}</h3>
         {!compact && <p>{caseStudy.listSummary}</p>}
-        <Link href={`/case-studies/${caseStudy.slug}`} className={styles.link}>
-          Read case study
-        </Link>
+        <span className={styles.link}>Read case study</span>
       </div>
-    </div>
+    </Link>
   );
 }
