@@ -18,9 +18,9 @@ export default function HomeHero() {
       <div className={styles.inner}>
         <div className={styles.tag}>Corrosion Protection Technology</div>
         <h1>
-          Corrosion Protection Without
+          Corrosion Protection
           <br />
-          the <em>Blasting.</em>
+          Without <em>Blasting</em>
         </h1>
         <p className={styles.sub}>
           NanoPrep is an environmentally friendly rust primer and anticorrosive industrial coating that reacts with rusted, painted and exposed steel. No grit blasting required!
