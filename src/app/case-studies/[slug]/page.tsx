@@ -38,6 +38,8 @@ export default async function CaseStudyDetailPage({ params }: { params: Params }
         title={caseStudy.title}
         sub={caseStudy.heroSub}
         image={caseStudy.heroImage}
+        downloadHref={caseStudy.downloadHref}
+        downloadLabel={caseStudy.downloadLabel}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Case Studies", href: "/case-studies" },
@@ -49,9 +51,11 @@ export default async function CaseStudyDetailPage({ params }: { params: Params }
 
       <div className={styles.contentWrap}>
         <ArticleBlocks blocks={caseStudy.blocks} />
-        <aside className={styles.sidebar}>
-          <ContactPanel />
-        </aside>
+        {caseStudy.showContactPanel !== false ? (
+          <aside className={styles.sidebar}>
+            <ContactPanel />
+          </aside>
+        ) : null}
       </div>
 
       <RelatedCaseStudies currentSlug={caseStudy.slug} />

@@ -11,6 +11,8 @@ export default function DetailHero({
   tagImage,
   breadcrumbs,
   style,
+  downloadHref,
+  downloadLabel,
 }: {
   tag: string;
   title: string;
@@ -19,6 +21,8 @@ export default function DetailHero({
   tagImage?: { src: string; alt: string; width: number; height: number };
   breadcrumbs?: Crumb[];
   style?: React.CSSProperties;
+  downloadHref?: string;
+  downloadLabel?: string;
 }) {
   return (
     <div style={style} className={`${styles.hero} ${image ? styles.heroPhoto : ""}`}>
@@ -42,6 +46,17 @@ export default function DetailHero({
           <span className={styles.tag}>{tag}</span>
           <h1>{title}</h1>
           {sub && <p className={styles.sub}>{sub}</p>}
+          {downloadHref && (
+            <a
+              className={styles.downloadLink}
+              href={downloadHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Case-Study-NanoPrep-Pipework-Corrosion-Protection.pdf"
+            >
+              {downloadLabel ?? "Download Case Study"}
+            </a>
+          )}
         </div>
       </div>
     </div>

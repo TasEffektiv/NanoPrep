@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { GalleryImage } from "@/lib/types";
 import styles from "./ImageGallery.module.css";
 
@@ -33,9 +34,21 @@ export default function ImageGallery({
       <div className={styles.gallery}>
         {images.map((image, index) => (
           <div key={`${image.caption}-${index}`} className={styles.item}>
-            <div className={styles.placeholder}>
-              <span>Image Placeholder</span>
-            </div>
+            {image.src ? (
+              <div className={styles.imageWrap}>
+                <Image
+                  src={image.src}
+                  alt={image.alt ?? image.caption}
+                  fill
+                  sizes="(min-width: 700px) 33vw, 100vw"
+                  className={styles.image}
+                />
+              </div>
+            ) : (
+              <div className={styles.placeholder}>
+                <span>Image Placeholder</span>
+              </div>
+            )}
             <div className={styles.caption}>{image.caption}</div>
           </div>
         ))}

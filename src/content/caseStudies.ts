@@ -21,6 +21,9 @@ export interface CaseStudy {
   listImage: { src: string; alt: string };
   listSummary: string;
   meta: CaseStudyMeta;
+  showContactPanel?: boolean;
+  downloadHref?: string;
+  downloadLabel?: string;
   blocks: ArticleBlock[];
 }
 
@@ -39,7 +42,7 @@ export { enquiryOptions };
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "pipework",
+    slug: "pipework-corrosion-protection-without-blasting",
     metaTitle: "Pipework Corrosion Protection Without Blasting — NanoPrep Case Study",
     metaDescription:
       "An offshore Oil & Gas facility used NanoPrep to remediate corroded pipework without abrasive blasting or operational shutdown.",
@@ -57,7 +60,7 @@ export const caseStudies: CaseStudy[] = [
       alt: "Pipework Corrosion Protection",
     },
     listSummary:
-      "An offshore Oil & Gas facility required coating remediation on pipework in areas where abrasive blasting was not possible. NanoPrep delivered a compliant solution without operational shutdown.",
+      "An offshore Oil & Gas facility required coating remedial work on pipework in areas where abrasive blasting was not possible. NanoPrep delivered a compliant solution without operational shutdown.",
     meta: {
       industry: "Oil & Gas",
       application: "Offshore Pipework Corrosion Protection",
@@ -65,20 +68,35 @@ export const caseStudies: CaseStudy[] = [
       location: "New Zealand",
       date: "Jan 2019",
     },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2025/08/Case-Study-NanoPrep-Pipework-Corrosion-Protection.pdf",
+    downloadLabel: "Download Case Study",
     blocks: [
       { type: "heading", text: "The Challenge" },
-      { type: "paragraph", text: "An offshore Oil & Gas facility required coating remedial work on pipework located in areas where it was not possible to perform surface preparation by abrasive blasting — due to wet and icy surfaces, and the costs associated with shutting down operations." },
-      { type: "paragraph", text: "The facility required a compliant anticorrosive coating system that could be applied to corroded steel surfaces without blast cleaning and without operational shutdown." },
-      { type: "highlight", text: "NanoPrep was selected as the preferred surface preparation solution — providing an effective, low-cost alternative to abrasive blasting in the form of a simple low-pressure power wash (3500 psi) combined with power tool cleaning." },
+      { type: "paragraph", text: "An offshore Oil & Gas facility required coating remedial work on pipework located in areas where it was not possible to perform surface preparation by abrasive blasting due to wet and icy surfaces, and the costs associated with shutting down operations." },
+      { type: "paragraph", text: "The facility needed a compliant anticorrosive coating system that could be applied to corroded steel surfaces without blast cleaning and without operational shutdown." },
+      { type: "highlight", text: "NanoPrep was selected as the preferred surface preparation solution because it provided an effective, low-cost alternative to abrasive blasting in the form of a simple low-pressure power wash (3500 psi) combined with power tool cleaning." },
       {
         type: "imageGroup",
         variant: "before",
         badgeLabel: "Before",
         heading: "Condition of pipework before coating remedial work",
         images: [
-          { caption: "Condition of pipework before coating remedial work" },
-          { caption: "Condition of pipework before coating remedial work" },
-          { caption: "Condition of pipework before coating remedial work" },
+          {
+            caption: "Condition of pipework before coating remedial work",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Condition-of-pipework-before-coating-remedial-work.jpg",
+            alt: "Condition of pipework before coating remedial work",
+          },
+          {
+            caption: "Corroded pipework on offshore Oil and Gas facility",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipework-on-offshore-Oil-and-Gas-facility.jpg",
+            alt: "Corroded pipework on offshore Oil and Gas facility",
+          },
+          {
+            caption: "Corroded pipes in offshore oil facility",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipes-in-offshore-oil-facility.jpg",
+            alt: "Corroded pipes in offshore oil facility",
+          },
         ],
       },
       { type: "heading", text: "The Application" },
@@ -89,9 +107,21 @@ export const caseStudies: CaseStudy[] = [
         badgeLabel: "Application",
         heading: "Two coats of NanoPrep applied by brush at 75μm",
         images: [
-          { caption: "Two coats of NanoPrep applied by brush at 75μm" },
-          { caption: "Two coats of NanoPrep applied by brush at 75μm" },
-          { caption: "Two coats of NanoPrep applied by brush at 75μm" },
+          {
+            caption: "Corroded pipe flange coated with NanoPrep",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipe-flange-coated-with-NanoPrep.jpg",
+            alt: "Corroded pipe flange coated with NanoPrep",
+          },
+          {
+            caption: "Corroded pipes coated with NanoPrep",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipes-coated-with-NanoPrep.jpg",
+            alt: "Corroded pipes coated with NanoPrep",
+          },
+          {
+            caption: "Corroded pipes in offshore oil facility coated with NanoPrep",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipes-in-offshore-oil-facility-coated-with-NanoPrep-scaled-1024x768.jpg",
+            alt: "Corroded pipes in offshore oil facility coated with NanoPrep",
+          },
         ],
       },
       {
@@ -100,9 +130,21 @@ export const caseStudies: CaseStudy[] = [
         badgeLabel: "After",
         heading: "One coat of PPG PSX 700 Topcoat applied at 75μm",
         images: [
-          { caption: "One coat of PPG PSX 700 Topcoat applied at 75μm" },
-          { caption: "One coat of PPG PSX 700 Topcoat applied at 75μm" },
-          { caption: "One coat of PPG PSX 700 Topcoat applied at 75μm" },
+          {
+            caption: "Corroded pipes coated with NanoPrep and PPG PSX 700",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipes-coated-with-NanoPrep-and-PPG-PSX-700.jpg",
+            alt: "Corroded pipes coated with NanoPrep and PPG PSX 700",
+          },
+          {
+            caption: "Corroded pipework at offshore Oil and Gas facility coated with NanoPrep and PPG PSX 700",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipework-at-offshore-Oil-and-Gas-facility-coated-with-Nanoprep-and-PPG-PSX-700.jpg",
+            alt: "Corroded pipework at offshore Oil and Gas facility coated with NanoPrep and PPG PSX 700",
+          },
+          {
+            caption: "Corroded pipework in offshore Oil and Gas facility coated with NanoPrep and PPG PSX 700",
+            src: "https://rezitech.com.au/wp-content/uploads/2025/06/Corroded-pipework-in-offshore-Oil-and-Gas-facility-coated-with-Nanoprep-and-PPG-PSX-700.jpg",
+            alt: "Corroded pipework in offshore Oil and Gas facility coated with NanoPrep and PPG PSX 700",
+          },
         ],
       },
       { type: "heading", text: "Key Outcomes" },
@@ -112,8 +154,8 @@ export const caseStudies: CaseStudy[] = [
           "Corrosion protection achieved without abrasive blasting in a confined offshore environment",
           "No hazardous blast media generated — no waste disposal required",
           "Application completed without operational shutdown",
-          "Full compliance with environmental and HSE requirements on the offshore platform",
-          "Durable anticorrosive system suitable for the offshore marine environment",
+          "Long-term protection delivered while saving time and money",
+          "Six years on, the coating remains in very good condition",
         ],
       },
       { type: "heading", text: "Project Specification" },
@@ -132,24 +174,24 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "fuel-tank",
+    slug: "fuel-tank-corrosion-protection-without-blasting",
     metaTitle: "Fuel Tank Corrosion Protection Without Blasting — NanoPrep Case Study",
     metaDescription:
-      "A 110,000-litre diesel storage tank in Queensland was protected with NanoPrep, avoiding a cost-prohibitive grit-blasting programme.",
+      "A 110,000-litre above-ground carbon-steel diesel tank in Queensland was protected with NanoPrep without abrasive blasting.",
     breadcrumbLabel: "Fuel Tank Corrosion Protection Without Blasting",
     industryKey: "oil-gas",
     industryLabel: "Oil & Gas",
     title: "Fuel Tank Corrosion Protection Without Blasting",
     heroImage: {
-      src: "/images/case-studies/fuel-tank.webp",
-      alt: "Fuel tank corrosion protection with NanoPrep",
+      src: "https://rezitech.com.au/wp-content/uploads/2025/10/Completed-application-of-NanoPrep-and-topcoat-on-fuel-tanks.jpg",
+      alt: "Completed application of NanoPrep and topcoat on fuel tanks",
     },
     listImage: {
-      src: "/images/case-studies/fuel-tank.webp",
+      src: "https://rezitech.com.au/wp-content/uploads/2025/10/Completed-application-of-NanoPrep-and-topcoat-on-fuel-tanks.jpg",
       alt: "Fuel Tank Corrosion Protection",
     },
     listSummary:
-      "A 110,000-litre above-ground carbon-steel diesel tank in Queensland required a high-performance anticorrosive coating system — applied without grit blasting.",
+      "A 110,000-litre above-ground carbon-steel diesel tank in Queensland required a high-performance anticorrosive coating system without abrasive blasting.",
     meta: {
       industry: "Oil & Gas",
       application: "Fuel Tank Corrosion Protection",
@@ -157,30 +199,40 @@ export const caseStudies: CaseStudy[] = [
       location: "Qld, Australia",
       date: "Oct 2025",
     },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2025/10/Case-Study-NanoPrep-Fuel-Tank-Corrosion-Protection.pdf",
+    downloadLabel: "Download Case Study",
     blocks: [
-      { type: "heading", text: "The Challenge" },
-      { type: "paragraph", text: "A 110,000-litre above-ground carbon-steel diesel storage tank in Queensland required a high-performance anticorrosive coating system. The tank had experienced significant corrosion on the external surfaces and required remediation to prevent further degradation." },
-      { type: "paragraph", text: "Grit blasting the tank to the required surface preparation standard was assessed as cost-prohibitive and operationally impractical — the location of the tank and the logistics of blast containment made conventional surface preparation methods difficult to justify." },
-      { type: "highlight", text: "NanoPrep provided a cost-effective alternative — delivering a high-performance anticorrosive primer system without the need for abrasive blasting." },
-      { type: "heading", text: "The Solution" },
-      { type: "paragraph", text: "Rezitech's team prepared the tank surfaces by hand tool cleaning to remove loose scale and contamination before applying NanoPrep directly to the corroded carbon steel surfaces. NanoPrep reacted chemically with the rust layer, converting the corrosion into a stable, adherent base for the topcoat system." },
-      { type: "paragraph", text: "A high-performance compatible topcoat was applied over the NanoPrep-treated surfaces, providing long-term protection against further corrosion and environmental exposure." },
+      { type: "heading", text: "The Problem" },
+      { type: "paragraph", text: "A 110,000-litre above-ground carbon-steel diesel tank in Queensland required a high-performance anticorrosive coating system. Year-round rain and condensation created a high risk of under-film and crevice corrosion, especially at saddle supports and tank-to-concrete interfaces. In addition, the coastal environment added airborne chlorides that accelerated corrosion, while continuous sunlight and elevated surface temperatures demanded a UV-stable, heat-tolerant topcoat to prevent premature coating degradation." },
+      { type: "paragraph", text: "Given the limited clearance beneath the tank and the presence of adjoining critical infrastructure, abrasive blasting for surface preparation was not feasible; therefore, an alternative method was required." },
+      { type: "highlight", text: "NanoPrep was chosen as the preferred surface-preparation method because it offers an effective, long-lasting, low-cost alternative to abrasive blasting using a simple low-pressure power wash combined with power-tool cleaning." },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "NanoPrep’s unique technology allows it to penetrate deep into existing painted surfaces for high adhesion and acts as a tie coat for many compatible topcoats. NanoPrep eliminates the need for abrasive blasting, enabling surface preparation via a simple low-pressure wash. It applies easily by roller, brush, or airless spray and is well suited to tight or difficult-to-access areas." },
       {
-        type: "articleImage",
-        src: "/images/case-studies/fuel-tank.webp",
-        alt: "Fuel tank coated with NanoPrep",
-      },
-      { type: "heading", text: "Key Outcomes" },
-      {
-        type: "list",
-        items: [
-          "110,000-litre diesel storage tank protected without grit blasting",
-          "Significant reduction in project cost compared to blast-and-coat approach",
-          "No blast containment required — reduced project complexity",
-          "No hazardous waste stream generated",
-          "High-performance anticorrosive system applied and ready for long-term service",
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Fuel tank condition and preparation",
+        images: [
+          { caption: "NanoPrep being applied under fuel tank", src: "https://rezitech.com.au/wp-content/uploads/2025/10/Nanoprep-being-applied-under-fuel-tank.jpg", alt: "NanoPrep being applied under fuel tank" },
+          { caption: "Mid application of NanoPrep to fuel tanks", src: "https://rezitech.com.au/wp-content/uploads/2025/10/Mid-application-of-NanoPrep-to-fuel-tanks.jpg", alt: "Mid application of NanoPrep to fuel tanks" },
+          { caption: "First coat of NanoPrep being applied to fuel tank", src: "https://rezitech.com.au/wp-content/uploads/2025/10/First-coat-of-NanoPrep-being-applied-to-fuel-tank.jpg", alt: "First coat of NanoPrep being applied to fuel tank" },
         ],
       },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "Completed NanoPrep and topcoat application",
+        images: [
+          { caption: "Fuel tanks coated with NanoPrep anticorrosive coating", src: "https://rezitech.com.au/wp-content/uploads/2025/10/Fuel-tanks-coated-with-NanoPrep-Anticorrosive-coating.jpg", alt: "Fuel tanks coated with NanoPrep anticorrosive coating" },
+          { caption: "Fuel tanks coated with NanoPrep and top coat", src: "https://rezitech.com.au/wp-content/uploads/2025/10/Fuel-tanks-coated-with-NanoPrep-and-top-coat.jpg", alt: "Fuel tanks coated with NanoPrep and top coat" },
+          { caption: "Completed application of NanoPrep and topcoat on fuel tanks", src: "https://rezitech.com.au/wp-content/uploads/2025/10/Completed-application-of-NanoPrep-and-topcoat-on-fuel-tanks.jpg", alt: "Completed application of NanoPrep and topcoat on fuel tanks" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "NanoPrep enabled effective surface preparation using low-pressure washing and power-tool cleaning, avoiding the excessive cost and downtime of abrasive blasting. The coating system delivered strong adhesion and robust corrosion resistance at saddle supports and tank-to-concrete interfaces, and a compatible UV-stable, heat-tolerant topcoat suited to Queensland conditions was successfully applied. The outcome is extended service life, protected fuel quality, and simpler future maintenance." },
       { type: "heading", text: "Project Specification" },
       {
         type: "specTable",
@@ -189,7 +241,7 @@ export const caseStudies: CaseStudy[] = [
           { label: "Application", value: "Above-ground diesel storage tank — external" },
           { label: "Tank capacity", value: "110,000 litres" },
           { label: "Material", value: "Carbon steel" },
-          { label: "Surface preparation", value: "Hand tool clean — no blasting" },
+          { label: "Surface preparation", value: "Low-pressure power wash (3,500 psi) + power tool clean" },
           { label: "NanoPrep system", value: "NanoPrep rust primer + compatible topcoat" },
           { label: "Location", value: "Queensland, Australia" },
         ],
@@ -197,7 +249,399 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "ash-hopper",
+    slug: "external-coating-of-ash-hopper",
+    metaTitle: "External Coating of Ash Hopper — NanoPrep Case Study",
+    metaDescription:
+      "A coal-fired power station used NanoPrep to recoat an ash hopper's external casing without abrasive blasting during a shutdown window.",
+    breadcrumbLabel: "External Coating of Ash Hopper",
+    industryKey: "power",
+    industryLabel: "Power",
+    title: "External Coating of Ash Hopper",
+    heroImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg",
+      alt: "Completed application of top coat on externals of ash hopper",
+    },
+    listImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg",
+      alt: "Ash Hopper Coating",
+    },
+    listSummary:
+      "A power station experienced degrading coating on an ash hopper. NanoPrep provided a fast, safe and effective external coating solution without blasting.",
+    meta: {
+      industry: "Power",
+      application: "External Coating on Ash Hopper",
+      products: "NanoPrep, Jotun",
+      location: "NSW, Australia",
+      date: "Nov 2024",
+    },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2025/01/Case-Study-External-Coating-of-Ash-Hopper.pdf",
+    downloadLabel: "Download Case Study",
+    blocks: [
+      { type: "heading", text: "The Problem" },
+      { type: "paragraph", text: "A coal-fired power station experienced an issue with the existing coating on an ash hopper degrading over years in service. This degradation had exposed the underlying steel, leading to accelerated external corrosion on the ash hopper’s casing." },
+      { type: "paragraph", text: "To address this, the customer required a new external coating to protect the ash hopper from further corrosion. Abrasive blasting was not an option for surface preparation due to the close proximity of other workers and the customer requiring a fast turnaround in order to complete the work during a major shutdown period." },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "NanoPrep was recommended as an alternative form of surface preparation since it did not require abrasive blasting or removal of the existing paint system that was still in good condition. The application was completed by the Rezitech Services onsite team." },
+      {
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Ash hopper existing condition and surface preparation",
+        images: [
+          { caption: "Ash hopper existing condition", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Ash-hopper-existing-condition.jpg", alt: "Ash hopper existing condition" },
+          { caption: "Pressure washing the ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Pressure-washing-the-ash-hopper.jpg", alt: "Pressure washing the ash hopper" },
+          { caption: "Spraying NanoPrep onto ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Spraying-NanoPrep-onto-ash-hopper.jpg", alt: "Spraying NanoPrep onto ash hopper" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "NanoPrep and topcoat application",
+        images: [
+          { caption: "Two coats of NanoPrep applied to ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Two-coats-of-NanoPrep-applied-to-ash-hopper.jpg", alt: "Two coats of NanoPrep applied to ash hopper" },
+          { caption: "Spraying of an external top coat on ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Spraying-of-an-external-top-coat-on-ash-hopper.jpg", alt: "Spraying of an external top coat on ash hopper" },
+          { caption: "Completed application of top coat on externals of ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg", alt: "Completed application of top coat on externals of ash hopper" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "The use of NanoPrep for surface preparation proved to be an excellent solution, enabling a quick turnaround by eliminating the need for abrasive blasting. NanoPrep not only saved a significant amount of time but also allowed the work to proceed safely alongside other workers working on the externals of the casing, which would have been impossible if abrasive blasting was used." },
+      { type: "heading", text: "Project Specification" },
+      { type: "specTable", rows: [ { label: "Industry", value: "Power Generation" }, { label: "Application", value: "External Coating on Ash Hopper" }, { label: "Surface condition", value: "Degraded coating, exposed corroded steel" }, { label: "Surface preparation", value: "Pressure wash — no blasting" }, { label: "Products", value: "NanoPrep, Jotun" }, { label: "Location", value: "NSW, Australia" }, { label: "Application date", value: "Nov 2024" }, { label: "Key requirement", value: "Fast turnaround during shutdown, no blasting near workers" } ] },
+    ],
+  },
+  {
+    slug: "water-tank-corrosion-protection",
+    metaTitle: "Water Tank Corrosion Protection — NanoPrep Case Study",
+    metaDescription:
+      "A power plant’s domestic water tank was repaired and protected with Belzona 1111, NanoPrep, and R230 TopCoat without abrasive blasting.",
+    breadcrumbLabel: "Water Tank Corrosion Protection",
+    industryKey: "power",
+    industryLabel: "Power",
+    title: "Water Tank Corrosion Protection",
+    heroImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2026/05/Power-station-water-tank-corrosion-protection.jpg",
+      alt: "Power station water tank corrosion protection",
+    },
+    listImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2026/05/Power-station-water-tank-corrosion-protection.jpg",
+      alt: "Water Tank Corrosion Protection",
+    },
+    listSummary:
+      "A power plant’s domestic water tank exhibited severe external corrosion and required structural repairs and a long-term protective coating system without abrasive blasting.",
+    meta: {
+      industry: "Power Generation",
+      application: "Water Tank Corrosion Repair & Protection",
+      products: "NanoPrep, R230 TopCoat, Belzona 1111",
+      location: "NSW, Australia",
+      date: "Dec 2025",
+    },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2026/05/Case-Study-Power-Station-Water-Tank-Corrosion-Protection.pdf",
+    downloadLabel: "Download Case Study",
+    blocks: [
+      { type: "heading", text: "The Problem" },
+      { type: "paragraph", text: "A power plant’s domestic water tank exhibited severe external corrosion, requiring structural repairs and the application of a long-term protective coating system. Due to the tank’s continuous exposure to UV radiation, it also required a UV-stable, heat-tolerant topcoat capable of preventing premature coating degradation." },
+      { type: "paragraph", text: "Abrasive blasting was not a viable surface preparation method due to the high costs associated with containment, encapsulation, and the removal of existing lead-based paint coatings." },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "NanoPrep was selected as the preferred surface preparation method as it provided an effective and cost-efficient alternative to abrasive blasting. Surface preparation was completed using a combination of low-pressure power washing (3,500 psi) and power tool cleaning, eliminating the need for costly containment and lead paint removal procedures." },
+      { type: "paragraph", text: "Before coating work commenced, several structural repairs were required due to severe corrosion damage. The tank underside had extensive pitting, while some of the steel column supports had deteriorated to the point where sections of steel were completely missing. Belzona 1111 (Super Metal) was used to repair the pitted areas on the tank underside, rebuild lost steel sections, and cold bond reinforcement plates onto the damaged steel supports, restoring structural integrity without the need for hot work." },
+      { type: "paragraph", text: "Once the repairs had fully cured, the steel supports and surrounding areas were coated with two coats of NanoPrep, followed by two coats of R230 TopCoat." },
+      {
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Tank underside corrosion and structural repair",
+        images: [
+          { caption: "Water tank underside showing corrosion and pitting damage", src: "https://rezitech.com.au/wp-content/uploads/2026/05/Water-tank-underside-pitting-restored-with-Belzona-1111.jpg", alt: "Water tank underside pitting restored with Belzona 1111" },
+          { caption: "Belzona 1111 was used to repair pitting and reinforce corroded areas", src: "https://rezitech.com.au/wp-content/uploads/2026/05/Repairing-corroded-steel-with-Belzona-1111.jpg", alt: "Repairing corroded steel with Belzona 1111" },
+          { caption: "Belzona 1111 used to repair corroded steel supports", src: "https://rezitech.com.au/wp-content/uploads/2026/05/Repairing-of-steel-support-with-Belzona-1111.jpg", alt: "Repairing of steel support with Belzona 1111" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "during",
+        badgeLabel: "Application",
+        heading: "NanoPrep and R230 TopCoat application — underside and supports",
+        images: [
+          { caption: "Rebuilding of metal loss on steel supports using Belzona 1111", src: "https://rezitech.com.au/wp-content/uploads/2026/05/Reinforcement-plate-cold-bonded-onto-damaged-steel-support.jpg", alt: "Reinforcement plate cold bonded onto damaged steel support" },
+          { caption: "Reinforcement plates cold bonded onto the damaged steel supports with Belzona 1111", src: "https://rezitech.com.au/wp-content/uploads/2026/05/Corroded-water-tanks-steel-supports-in-need-of-repair-and-coating.jpg", alt: "Corroded water tank steel supports in need of repair and coating" },
+          { caption: "Corroded tank underside and steel supports before repairs", src: "https://rezitech.com.au/wp-content/uploads/2026/05/water-tank-steel-supports-and-underside-repaired-and-coated-for-corrosion-protection.jpg", alt: "Water tank steel supports and underside repaired and coated for corrosion protection" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "Completed tank — corrosion protection restored",
+        images: [
+          { caption: "Tank underside and steel supports after application of NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2026/05/water-tank-steel-supports-and-underside-repaired-and-coated-with-R230-TopCoat.jpg", alt: "Water tank steel supports and underside repaired and coated with R230 TopCoat" },
+          { caption: "Tank underside and steel supports after application of R230 TopCoat", src: "https://rezitech.com.au/wp-content/uploads/2026/05/NanoPrep-being-applied-by-roller.jpg", alt: "NanoPrep being applied by roller" },
+          { caption: "Completed domestic water tank following application of the NanoPrep coating system and R230 TopCoat", src: "https://rezitech.com.au/wp-content/uploads/2026/05/Corroded-water-tank-repaired-and-protected-with-NanoPrep.jpg", alt: "Corroded water tank repaired and protected with NanoPrep" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "The project was successfully completed in just five days, with severely corroded areas repaired using Belzona and protected with NanoPrep and R230 TopCoat. By eliminating the need for abrasive blasting, the project avoided the high costs and delays associated with containment and lead paint removal, while still delivering a durable, long-term corrosion and UV protection system for the tank and supporting steelwork." },
+      { type: "heading", text: "Project Specification" },
+      { type: "specTable", rows: [ { label: "Industry", value: "Power Generation" }, { label: "Application", value: "Water Tank Corrosion Repair & Protection" }, { label: "Products", value: "NanoPrep, R230 TopCoat, Belzona 1111" }, { label: "Location", value: "NSW, Australia" }, { label: "Application date", value: "Dec 2025" }, { label: "Duration", value: "5 days" }, { label: "Surface preparation", value: "Low-pressure power wash (3,500 psi) + power tool clean — no blasting" }, { label: "Key requirement", value: "No blasting, lead paint encapsulation avoided, UV-stable topcoat" } ] },
+    ],
+  },
+  {
+    slug: "eco-friendly-solution-for-pylon-corrosion-protection",
+    metaTitle: "Eco-Friendly Solution for Pylon Corrosion Protection — NanoPrep Case Study",
+    metaDescription:
+      "NanoPrep provided an eco-friendly surface preparation solution for corroded pier pylons in a tidal marine environment without blasting.",
+    breadcrumbLabel: "Eco-Friendly Solution for Pylon Corrosion Protection",
+    industryKey: "marine",
+    industryLabel: "Marine",
+    title: "Eco-Friendly Solution for Pylon Corrosion Protection",
+    heroImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/12/Pier-pylons-before-commencement-of-corrosion-protection-work.jpg",
+      alt: "Pier pylons before commencement of corrosion protection work",
+    },
+    listImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/12/Pier-pylons-before-commencement-of-corrosion-protection-work.jpg",
+      alt: "Pylon Corrosion Protection",
+    },
+    listSummary:
+      "NanoPrep provided a unique eco-friendly surface preparation and corrosion protection solution for pylons in a sensitive tidal marine environment.",
+    meta: {
+      industry: "Marine",
+      application: "Protective coating on corroded and submerged pier pylons",
+      products: "NanoPrep, Belzona 5831, Wattyl DTM985",
+      location: "Far North Queensland, Australia",
+      date: "July 2023",
+    },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2024/12/Case-Study-Corroded-and-Submerged-Pier-Pylons-NanoPrep-Belzona.pdf",
+    downloadLabel: "Download Case Study",
+    blocks: [
+      { type: "heading", text: "The Problem" },
+      { type: "paragraph", text: "A common challenge in addressing corrosion on pier pylons or any structure near water is that you are unable to perform abrasive blasting. Most protective coatings rely on this type of surface preparation to ensure long-term performance in these harsh environments. This is particularly difficult in the tidal zone where the pylons will be submerged in water within hours." },
+      { type: "paragraph", text: "Until now, there have been no products on the market that provide a good long-term solution to this problem. Introducing NanoPrep!" },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "NanoPrep provides the perfect eco-friendly surface preparation solution. The product converts rust into an iron phosphate layer that adheres very strongly to the substrate through nanotechnology. The product also has high tolerance to chlorides due to its acidic base which neutralises the chlorides. This provides a high-quality surface preparation for appropriate coatings to be used. As the tide goes down, the pylons are pressure washed to remove loose rust scale. One coat of NanoPrep is applied and left for two hours to dry. Belzona 5831 moisture tolerant epoxy is then applied, which can cure underwater as the tide rises. The next day, a gentle pressure wash to remove surface chlorides and then a thin coat of NanoPrep is applied and left for two hours. The final coat of Wattyl DTM985 is then applied for UV and immersion protection." },
+      {
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Pier pylons before and during treatment",
+        images: [
+          { caption: "Original Pylon before surface preparation", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Original-Pylon-before-surface-preparation.jpg", alt: "Original Pylon before surface preparation" },
+          { caption: "NanoPrep Coating on pier pylon", src: "https://rezitech.com.au/wp-content/uploads/2024/12/NanoPrep-Coating-on-pier-pylon.jpg", alt: "NanoPrep Coating on pier pylon" },
+          { caption: "Belzona 5831 applied to pier pylon", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Belzona-5831-applied-to-pier-pylon.jpg", alt: "Belzona 5831 applied to pier pylon" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "Final pylon coating system",
+        images: [
+          { caption: "Pylon coated in Wattyl DTM985", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Pylon-coted-in-Wattyl-DTM985.jpg", alt: "Pylon coated in Wattyl DTM985" },
+          { caption: "Jetty piles protected with NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2025/10/Jetty-piles-protected-with-NanoPrep.jpg", alt: "Jetty piles protected with NanoPrep" },
+          { caption: "Pier pylons before commencement of corrosion protection work", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Pier-pylons-before-commencement-of-corrosion-protection-work.jpg", alt: "Pier pylons before commencement of corrosion protection work" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "This application was completed 18 months ago and is still in perfect condition." },
+      { type: "heading", text: "Project Specification" },
+      { type: "specTable", rows: [ { label: "Industry", value: "Marine" }, { label: "Application", value: "Protective coating on corroded and submerged pier pylons" }, { label: "Environment", value: "Sensitive marine tidal zone" }, { label: "Surface condition", value: "Corroded steel in aggressive tidal environment" }, { label: "Surface preparation", value: "Pressure wash and hand tool clean — no blasting" }, { label: "NanoPrep system", value: "NanoPrep rust primer + Belzona 5831 + Wattyl DTM985" }, { label: "Key requirement", value: "Non-hazardous, environmentally safe application" } ] },
+    ],
+  },
+  {
+    slug: "overhead-crane-restoration",
+    metaTitle: "Overhead Crane Restoration — NanoPrep Case Study",
+    metaDescription:
+      "A heavily corroded overhead crane in an active pulp and paper facility was restored using NanoPrep without abrasive blasting or shutdown.",
+    breadcrumbLabel: "Overhead Crane Restoration",
+    industryKey: "pulp-paper",
+    industryLabel: "Pulp & Paper",
+    title: "Overhead Crane Restoration",
+    heroImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/12/Original-condition-of-crane-before-protective-coating.jpg",
+      alt: "Original condition of crane before protective coating",
+    },
+    listImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/12/Original-condition-of-crane-before-protective-coating.jpg",
+      alt: "Overhead Crane Restoration",
+    },
+    listSummary:
+      "NanoPrep provided surface preparation and corrosion protection to a heavily corroded overhead crane in an active production environment without abrasive blasting.",
+    meta: {
+      industry: "Pulp & Paper",
+      application: "Crane Restoration",
+      products: "NanoPrep, Jotun XP Hardtop",
+      location: "QLD, Australia",
+      date: "Oct 2024",
+    },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2024/12/Case-Study-Overhead-Crane-Restoration-Using-NanoPrep.pdf",
+    downloadLabel: "Download Case Study",
+    blocks: [
+      { type: "heading", text: "The Problem" },
+      { type: "paragraph", text: "Pulp and Paper facilities are renowned for their corrosive environments, which necessitate their steel structures, including this overhead crane, to be maintained and protected against these elements." },
+      { type: "paragraph", text: "Due to the crane being 20 metres overhead and surrounded by critical equipment, abrasive blasting was not an option, so the client needed an alternative type of surface preparation for a protective coating to be applied." },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "NanoPrep provided the perfect solution for this application. First, the crane was high pressure washed at 3,500 psi to remove loose rust, coating, and any contaminants from the surface. Thereafter, two coats of NanoPrep were applied by airless spray. Finally, two coats of Jotun XP Hardtop in safety yellow were applied to provide added long-term protection and an aesthetic finish. The job was completed during regular operating hours without causing disruptions or requiring production to be stopped." },
+      {
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Original crane condition",
+        images: [
+          { caption: "Original condition of crane", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Original-condition-of-crane-before-protective-coating.jpg", alt: "Original condition of crane before protective coating" },
+          { caption: "NanoPrep applied to crane via airless spray gun after high pressure wash", src: "https://rezitech.com.au/wp-content/uploads/2024/12/NanoPrep-applied-to-crane-via-airless-spray-gun-after-high-pressure-wash.jpg", alt: "NanoPrep applied to crane via airless spray gun after high pressure wash" },
+          { caption: "Protective coating being applied to overhead crane", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Protective-coating-being-applied-to-overhead-crane.jpeg", alt: "Protective coating being applied to overhead crane" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "Completed crane restoration",
+        images: [
+          { caption: "Final result after two coats of Jotun XP Hardtop", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Final-result-after-two-coats-of-Jotun-XP-Hardtop-applied-to-crane.jpg", alt: "Final result after two coats of Jotun XP Hardtop" },
+          { caption: "Overhead crane protected from corrosion with NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Overhead-crane-protected-from-corrosion-with-NanoPrep.jpg", alt: "Overhead crane protected from corrosion with NanoPrep" },
+          { caption: "Application of NanoPrep via spray gun", src: "https://rezitech.com.au/wp-content/uploads/2024/12/Application-of-NanoPrep-via-spray-gun.jpg", alt: "Application of NanoPrep via spray gun" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "Previously, during 2019, the client had the other crane’s walkways and motor pans coated in NanoPrep as a trial. Five years later, they are still in perfect condition and as a result the client decided to coat another crane that was showing signs of degradation. The client is very happy with the result and requested additional cranes and other equipment to be protected using NanoPrep." },
+      { type: "heading", text: "Project Specification" },
+      { type: "specTable", rows: [ { label: "Industry", value: "Pulp & Paper" }, { label: "Application", value: "Overhead crane structure" }, { label: "Environment", value: "Active production facility — overhead location" }, { label: "Surface condition", value: "Heavily corroded steel structure" }, { label: "Surface preparation", value: "High pressure wash (3,500 psi) — no blasting" }, { label: "NanoPrep system", value: "NanoPrep rust primer + industrial topcoat" }, { label: "Key requirement", value: "No blast contamination of active production" } ] },
+    ],
+  },
+  {
+    slug: "structural-steel-column",
+    metaTitle: "Structural Steel Column Corrosion Protection — NanoPrep Case Study",
+    metaDescription:
+      "A corroded structural steel column base at a sugar mill was treated in-situ with NanoPrep, without blasting or shutdown.",
+    breadcrumbLabel: "Structural Steel Column Corrosion Protection",
+    industryKey: "sugar",
+    industryLabel: "Sugar",
+    title: "Structural Steel Column Corrosion Protection",
+    heroImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/07/Structural-Steel-Column-NanoPrep-trial.jpg",
+      alt: "Structural Steel Column NanoPrep trial",
+    },
+    listImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/07/Structural-Steel-Column-NanoPrep-trial.jpg",
+      alt: "Structural Steel Column",
+    },
+    listSummary:
+      "NanoPrep provided surface preparation and coating for a structural steel column base at a sugar mill, delivering seven years of corrosion protection without blasting.",
+    meta: {
+      industry: "Sugar",
+      application: "Surface preparation and coating",
+      products: "NanoPrep",
+      location: "Qld, Australia",
+      date: "Sept 2017 – Jul 2024",
+    },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2024/07/Case-Study-Structural-Steel-Column-7-Year-NanoPrep-Trial.pdf",
+    downloadLabel: "Download Case Study",
+    blocks: [
+      { type: "heading", text: "The Challenge" },
+      { type: "paragraph", text: "In September 2017 we applied two coats of NanoPrep to the base of a structural steel column at a sugar mill. The column forms part of the structure of a sugar conveyor located within 20 feet of a salt water river. The whole structure is suffering severe weathering and corrosion damage, and it has been deemed impractical to abrasive blast and coat the conveyor." },
+      { type: "paragraph", text: "The client tested NanoPrep on a small, corroded steel area to see if it could provide a suitable surface for a protective top coat." },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "An inspection was completed in May 2018. The application had seen no deterioration and the system was in good condition. An additional inspection was completed in August 2019 where there was clear evidence of rust on the coating, however this was from the salt water and rust dripping onto the base from above. Once cleaned, the application was found to be completely intact and the adhesion of the NanoPrep was excellent. The system was not drummy at all when tapped with a screwdriver and the base remains completely protected." },
+      {
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Corroded column base and surface preparation",
+        images: [
+          { caption: "Corroded base of steel column substrate", src: "https://rezitech.com.au/wp-content/uploads/2024/07/Corroded-base-of-steel-column-substrate.jpg", alt: "Corroded base of steel column substrate" },
+          { caption: "Base being prepared by hand tool", src: "https://rezitech.com.au/wp-content/uploads/2024/07/Completed-surface-preparation-of-base-of-structural-steel-column.jpg", alt: "Completed surface preparation of base of structural steel column" },
+          { caption: "Completed surface preparation", src: "https://rezitech.com.au/wp-content/uploads/2024/07/NanoPrepapplied-by-brush-to-corroded-base-of-steel-column-substrate.jpg", alt: "NanoPrep applied by brush to corroded base of steel column substrate" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "NanoPrep application and long-term performance",
+        images: [
+          { caption: "Application of two coats of NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2024/07/Completed-application-of-two-coats-NanoPrep.jpg", alt: "Completed application of two coats NanoPrep" },
+          { caption: "Top coat applied six weeks later", src: "https://rezitech.com.au/wp-content/uploads/2024/07/Top-Coat-applied-six-weeks-later.jpg", alt: "Top Coat applied six weeks later" },
+          { caption: "Base showing excellent adhesion of NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2024/07/Base-showing-excellent-adhesion-of-NanoPrep.jpg", alt: "Base showing excellent adhesion of NanoPrep" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "A third inspection in March 2020 again showed heavy rust had formed on the application from the structure above. ReziSafe’s Acidsafe 80 was used to clean the rust as best as possible, which showed the application still in excellent condition. A fourth inspection in November 2021 again showed the coating remained in very good condition. Midway through 2024, seven years on, the coating was still tightly bonded to the surface and protected against further corrosion, even in the harshest saltwater environment." },
+      { type: "heading", text: "Project Specification" },
+      { type: "specTable", rows: [ { label: "Industry", value: "Sugar" }, { label: "Application", value: "Structural steel column — base corrosion" }, { label: "Surface condition", value: "Significant corrosion at column base" }, { label: "Surface preparation", value: "Hand tool clean — no blasting" }, { label: "Application method", value: "Brush application" }, { label: "NanoPrep system", value: "NanoPrep rust primer + compatible topcoat" }, { label: "Key requirement", value: "In-situ treatment without production disruption" } ] },
+    ],
+  },
+  {
+    slug: "water-tank",
+    metaTitle: "Water Tank Corrosion Protection — NanoPrep Case Study",
+    metaDescription:
+      "A water storage tank was recoated with NanoPrep and R230 TopCoat, avoiding blast-media contamination risk to the water supply.",
+    breadcrumbLabel: "Water Tank Corrosion Protection",
+    industryKey: "water",
+    industryLabel: "Water",
+    title: "Water Tank Corrosion Protection",
+    heroImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/06/Water-tank-surface-preparation-using-pressure-wash.jpg",
+      alt: "Water tank surface preparation using pressure wash",
+    },
+    listImage: {
+      src: "https://rezitech.com.au/wp-content/uploads/2024/06/Water-tank-surface-preparation-using-pressure-wash.jpg",
+      alt: "Water Tank Corrosion Protection",
+    },
+    listSummary:
+      "Surface preparation and protective coating of a water storage tank using NanoPrep and R230 TopCoat — long-term corrosion protection without abrasive blasting.",
+    meta: {
+      industry: "Water & Wastewater",
+      application: "Surface preparation and coating",
+      products: "NanoPrep, ReziSafe R230 TopCoat (White)",
+      location: "SA, Australia",
+      date: "September 2021",
+    },
+    showContactPanel: false,
+    downloadHref: "https://rezitech.com.au/wp-content/uploads/2024/06/NanoPrep-Water-Tank-Corrosion-Protection-092021.pdf",
+    downloadLabel: "Download Case Study",
+    blocks: [
+      { type: "heading", text: "The Problem" },
+      { type: "paragraph", text: "Our client had a black steel water tank that had not previously been coated and was starting to rust. As a result, they required the rust on the surface to be removed or chemically transformed. In addition to the surface preparation, a coating was required for long-term protection against corrosion and underfilm corrosion. Due to being on a food production farm, they were concerned about the environmental impacts of grit blasting near crops and water, and wanted to avoid the substantial cost of scaffolding and encapsulation." },
+      { type: "heading", text: "The Application" },
+      { type: "paragraph", text: "NanoPrep was the preferred product for surface preparation to protect from underfilm corrosion and ReziSafe R230 Waterbased Top Coat (white) was applied as the final layer." },
+      {
+        type: "imageGroup",
+        variant: "before",
+        badgeLabel: "Before",
+        heading: "Original condition of the black steel water tank",
+        images: [
+          { caption: "Original Condition of the Black Steel Water Tank", src: "https://rezitech.com.au/wp-content/uploads/2024/06/Original-Condition-of-the-Black-Steel-Water-Tank.jpg", alt: "Original Condition of the Black Steel Water Tank" },
+          { caption: "Surface Prepared by High Pressure Wash", src: "https://rezitech.com.au/wp-content/uploads/2024/06/Surface-Prepared-by-High-Pressure-Wash.jpg", alt: "Surface Prepared by High Pressure Wash" },
+          { caption: "Application of NanoPrep Coating", src: "https://rezitech.com.au/wp-content/uploads/2024/06/Application-of-NanoPrep-Coating.jpg", alt: "Application of NanoPrep Coating" },
+        ],
+      },
+      {
+        type: "imageGroup",
+        variant: "after",
+        badgeLabel: "After",
+        heading: "Tank after application of NanoPrep and R230 TopCoat",
+        images: [
+          { caption: "Tank After the Application of NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2024/06/Tank-After-the-Application-of-NanoPrep.jpg", alt: "Tank After the Application of NanoPrep" },
+          { caption: "Tank After the Application of ReziSafe R230 Top Coat", src: "https://rezitech.com.au/wp-content/uploads/2024/06/Tank-After-the-Application-of-ReziSafe-R230-Top-Coat.jpg", alt: "Tank After the Application of ReziSafe R230 Top Coat" },
+          { caption: "Water tank surface preparation using pressure wash", src: "https://rezitech.com.au/wp-content/uploads/2024/06/Water-tank-surface-preparation-using-pressure-wash.jpg", alt: "Water tank surface preparation using pressure wash" },
+        ],
+      },
+      { type: "heading", text: "The Outcome" },
+      { type: "paragraph", text: "NanoPrep provided an easy to use, cost effective and environmentally friendly solution ensuring long-term protection against corrosion and underfilm corrosion. Large cost savings were achieved due to the removal of scaffolding requirements, with a cherry picker used instead, and there was no requirement for abrasive blasting, just a high pressure water wash." },
+      { type: "heading", text: "Applicator Testimonial" },
+      { type: "paragraph", text: "You have a really good product which minimises cost and helps environmentally from two pack and solvent paints used in painting of metals. Normally a job this size and being 10mm black steel would require sand blasting – we followed your specifications and used our 13.5 Honda Pressure Washer and it prepared perfect surfaces for your paint to be applied. Your water based NRX NanoPrep product exceeding my expectations and was very easy to use with a change of a heavier filter and a 19 tip we were able to apply the three coats of undercoat, two top coats with our 20 year old Wagner spraying equipment to achieve a brilliant finish. I will always be happy to use your product and recommend to others. Bay Painting Services South Australia" },
+      { type: "heading", text: "Project Specification" },
+      { type: "specTable", rows: [ { label: "Industry", value: "Water & Wastewater" }, { label: "Application", value: "Water storage tank" }, { label: "Surface condition", value: "Rusting black steel tank" }, { label: "Surface preparation", value: "High-pressure water wash — no blasting" }, { label: "Products", value: "NanoPrep, ReziSafe R230 TopCoat" }, { label: "Location", value: "SA, Australia" }, { label: "Application date", value: "September 2021" } ] },
+    ],
+  },
+  {
+    slug: "deprecated-ash-hopper",
     metaTitle: "External Coating of Ash Hopper — NanoPrep Case Study",
     metaDescription:
       "A coal-fired power station used NanoPrep to recoat an ash hopper's degraded external casing without abrasive blasting, during a shutdown window.",
@@ -284,7 +728,7 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "water-tank-power",
+    slug: "deprecated-water-tank-power",
     metaTitle: "Water Tank Corrosion Protection — Power Plant — NanoPrep Case Study",
     metaDescription:
       "A power plant's domestic water tank was structurally repaired with Belzona 1111 and protected with NanoPrep and R230 TopCoat, without abrasive blasting.",
@@ -389,7 +833,7 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "pylon",
+    slug: "deprecated-pylon",
     metaTitle: "Eco-Friendly Solution for Pylon Corrosion Protection — NanoPrep Case Study",
     metaDescription:
       "NanoPrep's waterborne, non-hazardous formulation protected jetty pylons from corrosion in a sensitive tidal marine zone without blasting.",
@@ -454,7 +898,7 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "crane",
+    slug: "deprecated-crane",
     metaTitle: "Overhead Crane Restoration — NanoPrep Case Study",
     metaDescription:
       "A heavily corroded overhead crane in an active pulp and paper facility was restored using NanoPrep, applied without abrasive blasting or shutdown.",
@@ -519,7 +963,7 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "steel-column",
+    slug: "deprecated-steel-column",
     metaTitle: "Structural Steel Column Corrosion Protection — NanoPrep Case Study",
     metaDescription:
       "A corroded structural steel column base at an active manufacturing facility was treated in-situ with NanoPrep, without blasting or shutdown.",
@@ -650,7 +1094,8 @@ export const caseStudies: CaseStudy[] = [
 ];
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {
-  return caseStudies.find((cs) => cs.slug === slug);
+  const canonicalSlug = slugAliases[slug] ?? slug;
+  return caseStudies.find((cs) => cs.slug === canonicalSlug);
 }
 
 /**
@@ -659,7 +1104,17 @@ export function getCaseStudy(slug: string): CaseStudy | undefined {
  * itself as "related". Fixed here to genuinely exclude the current page,
  * preferring a stable curated order. See CHANGELOG.md.
  */
-const relatedOrder = ["pylon", "crane", "fuel-tank", "ash-hopper", "pipework", "steel-column", "water-tank", "water-tank-power"];
+const relatedOrder = ["eco-friendly-solution-for-pylon-corrosion-protection", "overhead-crane-restoration", "fuel-tank-corrosion-protection-without-blasting", "external-coating-of-ash-hopper", "pipework-corrosion-protection-without-blasting", "structural-steel-column", "water-tank", "water-tank-corrosion-protection"];
+
+const slugAliases: Record<string, string> = {
+  pipework: "pipework-corrosion-protection-without-blasting",
+  "fuel-tank": "fuel-tank-corrosion-protection-without-blasting",
+  "ash-hopper": "external-coating-of-ash-hopper",
+  "water-tank-power": "water-tank-corrosion-protection",
+  pylon: "eco-friendly-solution-for-pylon-corrosion-protection",
+  crane: "overhead-crane-restoration",
+  "steel-column": "structural-steel-column",
+};
 
 export function getRelatedCaseStudies(currentSlug: string, count = 3): CaseStudy[] {
   return relatedOrder

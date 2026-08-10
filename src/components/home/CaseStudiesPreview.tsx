@@ -11,22 +11,22 @@ import styles from "./CaseStudiesPreview.module.css";
  */
 const preview = [
   {
-    slug: "pylon",
+    slug: "eco-friendly-solution-for-pylon-corrosion-protection",
     summary:
       "NanoPrep applied to jetty pylons in a sensitive marine environment — corrosion protection without blasting or hazardous waste in a tidal zone.",
   },
   {
-    slug: "fuel-tank",
+    slug: "fuel-tank-corrosion-protection-without-blasting",
     summary:
       "Large fuel storage tanks treated with NanoPrep where grit blasting was cost prohibitive and operationally impractical — delivered at a fraction of conventional cost.",
   },
   {
-    slug: "pipework",
+    slug: "pipework-corrosion-protection-without-blasting",
     summary:
       "Corroded pipework treated in-situ using NanoPrep — no isolation, no blast equipment, no waste disposal. Application completed during normal operations.",
   },
   {
-    slug: "crane",
+    slug: "overhead-crane-restoration",
     summary:
       "Heavily corroded overhead crane restored using NanoPrep and a compatible topcoat system — applied without shutdown, in an active production environment.",
   },

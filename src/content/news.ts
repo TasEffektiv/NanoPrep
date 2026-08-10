@@ -45,7 +45,7 @@ export const newsItems: NewsItem[] = [
       { label: "Location", value: "Qld, Australia" },
       { label: "Applied", value: "Oct 2025" },
     ],
-    relatedCaseStudies: ["fuel-tank", "water-tank-power", "pipework"],
+    relatedCaseStudies: ["fuel-tank-corrosion-protection-without-blasting", "water-tank-corrosion-protection", "pipework-corrosion-protection-without-blasting"],
     blocks: [
       {
         type: "articleImage",
@@ -127,7 +127,7 @@ export const newsItems: NewsItem[] = [
     title: "Fuel Tank Corrosion Protection Without Blasting",
     excerpt:
       "A 110,000-litre above-ground carbon-steel diesel tank in Queensland received a high-performance anticorrosive system — prepared and protected without grit blasting.",
-    href: "/case-studies/fuel-tank",
+    href: "/case-studies/fuel-tank-corrosion-protection-without-blasting",
     image: { src: "/images/case-studies/fuel-tank.webp", alt: "Fuel Tank Corrosion Protection" },
   },
   {
@@ -139,7 +139,7 @@ export const newsItems: NewsItem[] = [
     title: "Water Tank Corrosion Protection — Power Plant",
     excerpt:
       "A power plant's water tank required corrosion repair and a durable protective coating, delivered without surface preparation by abrasive blasting.",
-    href: "/case-studies/water-tank-power",
+    href: "/case-studies/water-tank-corrosion-protection",
     image: { src: "/images/case-studies/water-tank-power.webp", alt: "Water Tank Corrosion Protection" },
   },
   {
@@ -151,7 +151,7 @@ export const newsItems: NewsItem[] = [
     title: "Pipework Corrosion Protection Without Blasting",
     excerpt:
       "An offshore facility needed pipework remediation where blasting wasn't possible. NanoPrep delivered a compliant solution without operational shutdown.",
-    href: "/case-studies/pipework",
+    href: "/case-studies/pipework-corrosion-protection-without-blasting",
     image: { src: "/images/case-studies/pipework.webp", alt: "Pipework Corrosion Protection" },
   },
   {
@@ -163,7 +163,7 @@ export const newsItems: NewsItem[] = [
     title: "External Coating of Ash Hopper",
     excerpt:
       "A power station's ash hopper had degrading coating and required a new corrosion protection system — applied by NanoPrep without abrasive blasting.",
-    href: "/case-studies/ash-hopper",
+    href: "/case-studies/external-coating-of-ash-hopper",
     image: { src: "/images/case-studies/ash-hopper.webp", alt: "Ash Hopper Coating" },
   },
   {
@@ -175,7 +175,7 @@ export const newsItems: NewsItem[] = [
     title: "Eco-Friendly Pylon Corrosion Protection",
     excerpt:
       "NanoPrep provided an eco-friendly surface preparation and corrosion protection solution for pylons in a sensitive tidal marine environment.",
-    href: "/case-studies/pylon",
+    href: "/case-studies/eco-friendly-solution-for-pylon-corrosion-protection",
     image: { src: "/images/case-studies/pylon.webp", alt: "Pylon Corrosion Protection" },
   },
   {
@@ -187,7 +187,7 @@ export const newsItems: NewsItem[] = [
     title: "Overhead Crane Restoration",
     excerpt:
       "A heavily corroded overhead crane in an active production plant was prepared and protected with NanoPrep — no abrasive blasting required.",
-    href: "/case-studies/crane",
+    href: "/case-studies/overhead-crane-restoration",
     image: { src: "/images/case-studies/crane.webp", alt: "Overhead Crane Restoration" },
   },
 ];
