@@ -19,11 +19,13 @@ export default function ImageGallery({
   badgeLabel,
   heading,
   images,
+  showCaptions,
 }: {
   variant: "before" | "during" | "after" | "plain";
   badgeLabel?: string;
   heading?: string;
   images: GalleryImage[];
+  showCaptions?: boolean;
 }) {
   return (
     <div className={`${styles.group} ${variantClass[variant as keyof typeof variantClass] ?? ""}`}>
@@ -39,7 +41,7 @@ export default function ImageGallery({
       )}
       <div className={styles.gallery}>
         {images.map((image, index) => (
-          <div key={`${image.caption}-${index}`} className={styles.item}>
+          <div key={`${image.src ?? image.caption}-${index}`} className={styles.item}>
             {image.src ? (
               <div className={styles.imageWrap}>
                 <Image
@@ -55,7 +57,7 @@ export default function ImageGallery({
                 <span>Image Placeholder</span>
               </div>
             )}
-            <div className={styles.caption}>{image.caption}</div>
+            {showCaptions && image.caption && <p className={styles.plainCaption}>{image.caption}</p>}
           </div>
         ))}
       </div>

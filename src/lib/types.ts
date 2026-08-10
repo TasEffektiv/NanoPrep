@@ -50,6 +50,7 @@ export type ArticleBlock =
       badgeLabel?: string;
       heading?: string;
       images: GalleryImage[];
+      showCaptions?: boolean;
     }
   | { type: "photoGallery"; images: { src: string; alt: string }[]; caption: string }
   | { type: "inlineVideo"; heading: string; label: string; caption: string; videoId?: string }

@@ -65,6 +65,7 @@ export default function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
                 badgeLabel={block.badgeLabel}
                 heading={block.heading}
                 images={block.images}
+                showCaptions={block.showCaptions}
               />
             );
 
