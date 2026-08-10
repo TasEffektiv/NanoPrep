@@ -22,9 +22,6 @@ export default function MetaStrip({ meta }: { meta: CaseStudyMeta }) {
             <strong>Application Date:</strong> <span>{meta.date}</span>
           </div>
         </div>
-        <a href="#" className={styles.downloadBtn}>
-          Download Case Study
-        </a>
       </div>
     </div>
   );
