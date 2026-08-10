@@ -51,6 +51,7 @@ export type ArticleBlock =
       heading?: string;
       images: GalleryImage[];
       showCaptions?: boolean;
+      imageAspectRatio?: string;
     }
   | { type: "photoGallery"; images: { src: string; alt: string }[]; caption: string }
   | { type: "inlineVideo"; heading: string; label: string; caption: string; videoId?: string }

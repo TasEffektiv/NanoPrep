@@ -20,12 +20,14 @@ export default function ImageGallery({
   heading,
   images,
   showCaptions,
+  imageAspectRatio,
 }: {
   variant: "before" | "during" | "after" | "plain";
   badgeLabel?: string;
   heading?: string;
   images: GalleryImage[];
   showCaptions?: boolean;
+  imageAspectRatio?: string;
 }) {
   return (
     <div className={`${styles.group} ${variantClass[variant as keyof typeof variantClass] ?? ""}`}>
@@ -39,7 +41,15 @@ export default function ImageGallery({
           {heading && <h3>{heading}</h3>}
         </div>
       )}
-      <div className={styles.gallery}>
+      <div
+        className={styles.gallery}
+        style={
+          {
+            "--cols": Math.min(images.length, 4),
+            ...(imageAspectRatio ? { "--ar": imageAspectRatio } : {}),
+          } as React.CSSProperties
+        }
+      >
         {images.map((image, index) => (
           <div key={`${image.src ?? image.caption}-${index}`} className={styles.item}>
             {image.src ? (

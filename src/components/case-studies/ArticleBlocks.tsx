@@ -66,6 +66,7 @@ export default function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
                 heading={block.heading}
                 images={block.images}
                 showCaptions={block.showCaptions}
+                imageAspectRatio={block.imageAspectRatio}
               />
             );
 
