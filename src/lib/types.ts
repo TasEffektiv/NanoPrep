@@ -46,12 +46,12 @@ export type ArticleBlock =
   | { type: "articleImage"; src: string; alt: string; caption?: string }
   | {
       type: "imageGroup";
-      variant: "before" | "during" | "after";
-      badgeLabel: string;
-      heading: string;
+      variant: "before" | "during" | "after" | "plain";
+      badgeLabel?: string;
+      heading?: string;
       images: GalleryImage[];
     }
   | { type: "photoGallery"; images: { src: string; alt: string }[]; caption: string }
-  | { type: "inlineVideo"; heading: string; label: string; caption: string }
-  | { type: "featuredVideo"; label: string; caption: string }
+  | { type: "inlineVideo"; heading: string; label: string; caption: string; videoId?: string }
+  | { type: "featuredVideo"; label: string; caption: string; videoId?: string }
   | { type: "specTable"; rows: { label: string; value: string }[] };

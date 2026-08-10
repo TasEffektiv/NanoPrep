@@ -69,10 +69,18 @@ export default function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
             );
 
           case "inlineVideo":
-            return <InlineVideo key={key} heading={block.heading} label={block.label} caption={block.caption} />;
+            return (
+              <InlineVideo
+                key={key}
+                heading={block.heading}
+                label={block.label}
+                caption={block.caption}
+                videoId={block.videoId}
+              />
+            );
 
           case "featuredVideo":
-            return <FeaturedVideo key={key} label={block.label} caption={block.caption} />;
+            return <FeaturedVideo key={key} label={block.label} caption={block.caption} videoId={block.videoId} />;
 
           case "specTable":
             return (

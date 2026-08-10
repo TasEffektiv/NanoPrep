@@ -20,17 +20,23 @@ export default function ImageGallery({
   heading,
   images,
 }: {
-  variant: "before" | "during" | "after";
-  badgeLabel: string;
-  heading: string;
+  variant: "before" | "during" | "after" | "plain";
+  badgeLabel?: string;
+  heading?: string;
   images: GalleryImage[];
 }) {
   return (
-    <div className={`${styles.group} ${variantClass[variant]}`}>
-      <div className={styles.header}>
-        <span className={`${styles.badge} ${badgeClass[variant]}`}>{badgeLabel}</span>
-        <h3>{heading}</h3>
-      </div>
+    <div className={`${styles.group} ${variantClass[variant as keyof typeof variantClass] ?? ""}`}>
+      {(badgeLabel || heading) && (
+        <div className={styles.header}>
+          {badgeLabel && (
+            <span className={`${styles.badge} ${badgeClass[variant as keyof typeof badgeClass] ?? ""}`}>
+              {badgeLabel}
+            </span>
+          )}
+          {heading && <h3>{heading}</h3>}
+        </div>
+      )}
       <div className={styles.gallery}>
         {images.map((image, index) => (
           <div key={`${image.caption}-${index}`} className={styles.item}>

@@ -257,9 +257,10 @@ export const caseStudies: CaseStudy[] = [
     industryKey: "power",
     industryLabel: "Power",
     title: "External Coating of Ash Hopper",
+    heroSub: "NanoPrep provides surface preparation without blasting",
     heroImage: {
-      src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg",
-      alt: "Completed application of top coat on externals of ash hopper",
+      src: "https://rezitech.com.au/wp-content/uploads/2025/01/NanoPrep-being-applied-to-ash-hopper.jpg",
+      alt: "NanoPrep being applied to ash hopper",
     },
     listImage: {
       src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg",
@@ -284,25 +285,22 @@ export const caseStudies: CaseStudy[] = [
       { type: "heading", text: "The Application" },
       { type: "paragraph", text: "NanoPrep was recommended as an alternative form of surface preparation since it did not require abrasive blasting or removal of the existing paint system that was still in good condition. The application was completed by the Rezitech Services onsite team." },
       {
-        type: "imageGroup",
-        variant: "before",
-        badgeLabel: "Before",
-        heading: "Ash hopper existing condition and surface preparation",
-        images: [
-          { caption: "Ash hopper existing condition", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Ash-hopper-existing-condition.jpg", alt: "Ash hopper existing condition" },
-          { caption: "Pressure washing the ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Pressure-washing-the-ash-hopper.jpg", alt: "Pressure washing the ash hopper" },
-          { caption: "Spraying NanoPrep onto ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Spraying-NanoPrep-onto-ash-hopper.jpg", alt: "Spraying NanoPrep onto ash hopper" },
-        ],
+        type: "inlineVideo",
+        heading: "NanoPrep Application",
+        label: "NanoPrep Application",
+        caption: "NanoPrep Application — Rezitech Services",
+        videoId: "KIufIJzbkhs",
       },
       {
         type: "imageGroup",
-        variant: "after",
-        badgeLabel: "After",
-        heading: "NanoPrep and topcoat application",
+        variant: "plain",
         images: [
-          { caption: "Two coats of NanoPrep applied to ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Two-coats-of-NanoPrep-applied-to-ash-hopper.jpg", alt: "Two coats of NanoPrep applied to ash hopper" },
-          { caption: "Spraying of an external top coat on ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Spraying-of-an-external-top-coat-on-ash-hopper.jpg", alt: "Spraying of an external top coat on ash hopper" },
-          { caption: "Completed application of top coat on externals of ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg", alt: "Completed application of top coat on externals of ash hopper" },
+          { caption: "Ash hopper existing condition", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Ash-hopper-existing-condition.jpg", alt: "Ash hopper existing condition" },
+          { caption: "Pressure washing the ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Pressure-washing-the-ash-hopper.jpg", alt: "Pressure washing the ash hopper" },
+          { caption: "Spraying NanoPrep", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Spraying-NanoPrep-onto-ash-hopper.jpg", alt: "Spraying NanoPrep onto ash hopper" },
+          { caption: "Two coats of NanoPrep applied", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Two-coats-of-NanoPrep-applied-to-ash-hopper.jpg", alt: "Two coats of NanoPrep applied to ash hopper" },
+          { caption: "Spraying of the top coat", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Spraying-of-an-external-top-coat-on-ash-hopper.jpg", alt: "Spraying of an external top coat on ash hopper" },
+          { caption: "Completed application – Externals of the ash hopper", src: "https://rezitech.com.au/wp-content/uploads/2025/01/Completed-application-of-top-coat-on-externals-of-ash-hopper.jpg", alt: "Completed application of top coat on externals of ash hopper" },
         ],
       },
       { type: "heading", text: "The Outcome" },
@@ -1092,6 +1090,15 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
 ];
+
+/**
+ * Superseded draft entries (slug prefixed "deprecated-") are kept in
+ * `caseStudies` so their pages still build and old links don't 404, but they
+ * must never appear in the public /case-studies listing — that would surface
+ * a duplicate card pointing at a "deprecated-…" URL for a case study that
+ * already has a proper published entry.
+ */
+export const publishedCaseStudies = caseStudies.filter((cs) => !cs.slug.startsWith("deprecated-"));
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {
   const canonicalSlug = slugAliases[slug] ?? slug;

@@ -1,6 +1,6 @@
 import PageHeader from "@/components/ui/PageHeader";
 import IndustryFilter from "@/components/case-studies/IndustryFilter";
-import { caseStudies } from "@/content/caseStudies";
+import { publishedCaseStudies } from "@/content/caseStudies";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
@@ -22,7 +22,7 @@ export default function CaseStudiesPage() {
         image={{ src: "/images/case-studies/Case studies.jpg", alt: "Corroded structural steel beams coated red" }}
         style={{ minHeight: 300, height: 300 }}
       />
-      <IndustryFilter caseStudies={caseStudies} />
+      <IndustryFilter caseStudies={publishedCaseStudies} />
     </>
   );
 }
