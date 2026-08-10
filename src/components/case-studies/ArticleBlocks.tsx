@@ -82,6 +82,17 @@ export default function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           case "featuredVideo":
             return <FeaturedVideo key={key} label={block.label} caption={block.caption} videoId={block.videoId} />;
 
+          case "testimonial":
+            return (
+              <blockquote key={key} className={styles.testimonial}>
+                <span className={styles.testimonialQuoteMark} aria-hidden="true">
+                  “
+                </span>
+                <p className={styles.testimonialQuote}>{block.quote}</p>
+                <cite className={styles.testimonialAttribution}>{block.attribution}</cite>
+              </blockquote>
+            );
+
           case "specTable":
             return (
               <table key={key} className={styles.specTable}>

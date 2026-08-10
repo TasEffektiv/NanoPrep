@@ -100,6 +100,51 @@
   }
 }
 
+.testimonial {
+  background: var(--light);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--green);
+  border-radius: 0 8px 8px 8px;
+  padding: 8px 28px 24px;
+  margin: 24px 0;
+}
+
+.testimonialQuoteMark {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--green);
+  opacity: 0.4;
+}
+
+.testimonialQuote {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.testimonialAttribution {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+}
+
+.testimonialAttribution::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
 .specTable {
   width: 100%;
   border-collapse: collapse;

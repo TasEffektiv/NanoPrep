@@ -64,7 +64,7 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2px;
   background: #e0e0e0;
   padding: 2px;
@@ -76,17 +76,17 @@
 
 .imageWrap {
   position: relative;
-  height: 180px;
+  height: 320px;
   background: #f5f5f5;
   overflow: hidden;
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .placeholder {
-  height: 180px;
+  height: 320px;
   background: repeating-linear-gradient(45deg, #f5f5f5, #f5f5f5 8px, #ebebeb 8px, #ebebeb 16px);
   display: flex;
   align-items: center;
