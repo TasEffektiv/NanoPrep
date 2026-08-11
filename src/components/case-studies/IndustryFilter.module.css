@@ -45,6 +45,11 @@
   border-color: var(--green2);
 }
 
+.filterBtnActive:hover {
+  color: #fff;
+  border-color: var(--green2);
+}
+
 .section {
   padding: 64px 40px;
 }
