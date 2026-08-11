@@ -7,7 +7,13 @@ export default function HowToGuideCard({ guide }: { guide: HowToGuide }) {
   return (
     <Link href={guide.href} className={styles.card}>
       <div className={styles.image}>
-        <Image src={guide.image.src} alt={guide.image.alt} fill sizes="(min-width: 900px) 25vw, 100vw" />
+        <Image
+          src={guide.image.src}
+          alt={guide.image.alt}
+          fill
+          sizes="(min-width: 900px) 25vw, 100vw"
+          className={styles.thumbnail}
+        />
         <span className={styles.tag}>Step-by-Step Guide</span>
       </div>
       <div className={styles.content}>

@@ -18,6 +18,10 @@
   background: linear-gradient(135deg, #c8dac8 0%, #9ab89a 100%);
 }
 
+.thumbnail {
+  object-fit: cover;
+}
+
 .tag {
   position: absolute;
   top: 14px;
