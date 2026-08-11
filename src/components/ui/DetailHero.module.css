@@ -1,7 +1,6 @@
 .hero {
   position: relative;
   min-height: 280px;
-  padding: 56px 40px 52px;
   overflow: hidden;
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
 }
@@ -30,7 +29,7 @@
 
 @media (max-width: 640px) {
   .heroPhoto {
-    min-height: 460px;
+    min-height: 300px;
   }
 
   .tagImage {
@@ -38,6 +37,10 @@
     top: 16px;
     right: 16px;
   }
+}
+
+.compact {
+  min-height: 300px;
 }
 
 .placeholder {
@@ -71,8 +74,7 @@
 }
 
 .overlay {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 1;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.28) 45%, rgba(0, 0, 0, 0.08) 100%),
     linear-gradient(90deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 60%);
@@ -138,4 +140,24 @@
 
 .downloadLink:hover {
   opacity: 0.95;
+}
+
+@media (max-width: 640px) {
+  .overlay {
+    padding: 40px 20px 32px;
+  }
+
+  .content h1 {
+    font-size: clamp(26px, 8vw, 34px);
+    max-width: 100%;
+  }
+
+  .sub {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .downloadLink {
+    font-size: 13px;
+  }
 }

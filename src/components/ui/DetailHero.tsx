@@ -10,7 +10,7 @@ export default function DetailHero({
   image,
   tagImage,
   breadcrumbs,
-  style,
+  compact,
   downloadHref,
   downloadLabel,
 }: {
@@ -20,12 +20,14 @@ export default function DetailHero({
   image?: { src: string; alt: string };
   tagImage?: { src: string; alt: string; width: number; height: number };
   breadcrumbs?: Crumb[];
-  style?: React.CSSProperties;
+  compact?: boolean;
   downloadHref?: string;
   downloadLabel?: string;
 }) {
   return (
-    <div style={style} className={`${styles.hero} ${image ? styles.heroPhoto : ""}`}>
+    <div
+      className={`${styles.hero} ${image ? styles.heroPhoto : ""} ${compact ? styles.compact : ""}`}
+    >
       {image ? (
         <Image src={image.src} alt={image.alt} fill priority sizes="100vw" className={styles.bgImage} />
       ) : (

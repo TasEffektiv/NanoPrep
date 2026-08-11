@@ -45,7 +45,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Params }
           { label: "Case Studies", href: "/case-studies" },
           { label: caseStudy.breadcrumbLabel },
         ]}
-        style={{ minHeight: 300, height: 300 }}
+        compact
       />
       <MetaStrip meta={caseStudy.meta} />
 

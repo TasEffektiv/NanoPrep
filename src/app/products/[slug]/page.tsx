@@ -40,11 +40,7 @@ export default async function ProductDetailPage({ params }: { params: Params }) 
           { label: "Products", href: "/products" },
           { label: product.breadcrumbLabel },
         ]}
-        style={
-          product.slug === "nanoprep" || product.slug === "r230-topcoat"
-            ? { minHeight: 300, height: 300 }
-            : undefined
-        }
+        compact={product.slug === "nanoprep" || product.slug === "r230-topcoat"}
       />
       <FeatureStrip items={product.featurePills} />
       <ContentBlocks blocks={product.blocks} cta={product.cta} />
