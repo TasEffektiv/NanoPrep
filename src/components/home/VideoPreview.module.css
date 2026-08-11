@@ -131,6 +131,20 @@
   }
 }
 
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .sub {
+    margin-bottom: 28px;
+  }
+}
+
 .modalBackdrop {
   position: fixed;
   inset: 0;

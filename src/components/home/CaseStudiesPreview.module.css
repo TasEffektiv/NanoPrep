@@ -94,6 +94,10 @@
   justify-content: center;
 }
 
+.thumbnail {
+  object-fit: cover;
+}
+
 .placeholderText {
   font-size: 12px;
   font-weight: 500;
@@ -163,5 +167,17 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    margin-bottom: 32px;
   }
 }

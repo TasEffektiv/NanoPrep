@@ -140,3 +140,17 @@
     gap: 48px;
   }
 }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .processPhoto {
+    margin-top: 40px;
+  }
+}

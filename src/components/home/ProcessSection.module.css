@@ -174,3 +174,21 @@
     border-bottom: none;
   }
 }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .cards {
+    margin-bottom: 40px;
+  }
+}

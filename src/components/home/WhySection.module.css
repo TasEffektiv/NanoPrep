@@ -151,3 +151,22 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .grid {
+    margin-top: 36px;
+    gap: 32px;
+  }
+
+  .visual {
+    padding: 28px;
+  }
+}

@@ -101,6 +101,16 @@
   animation-delay: 0.4s;
 }
 
+@media (max-width: 600px) {
+  .hero {
+    min-height: 480px;
+  }
+
+  .inner {
+    padding: 48px 20px;
+  }
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
