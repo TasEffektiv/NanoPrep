@@ -191,4 +191,28 @@
   .cards {
     margin-bottom: 40px;
   }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .cardIcon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .cardIcon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .iconStack {
+    gap: 8px;
+  }
+
+  .iconStack img {
+    width: 40px;
+    height: 40px;
+  }
 }
