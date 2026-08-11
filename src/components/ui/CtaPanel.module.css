@@ -13,7 +13,7 @@
   margin-bottom: 10px;
 }
 
-.panel p {
+.panel .text {
   color: #fff;
   margin-bottom: 22px;
   max-width: 480px;

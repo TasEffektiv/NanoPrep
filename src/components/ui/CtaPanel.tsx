@@ -15,7 +15,7 @@ export default function CtaPanel({
   return (
     <div className={styles.panel}>
       <h3>{heading}</h3>
-      <p>{text}</p>
+      <p className={styles.text}>{text}</p>
       <Link href={href} className={styles.button}>
         {label}
       </Link>
