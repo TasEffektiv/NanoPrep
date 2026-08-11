@@ -53,7 +53,7 @@
 
 .statsStrip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2px;
   background: var(--rule);
   border-radius: 10px;
@@ -153,5 +153,23 @@
   .introRow {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .section {
+    padding: 48px 20px;
+  }
+
+  .heritagePanel {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .statsStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    padding: 20px;
   }
 }
