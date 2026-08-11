@@ -11,7 +11,7 @@ export interface Product {
   cardSummary: string;
   cardFeatures: string[];
   cardHref?: string;
-  cardImage?: { src: string; alt: string };
+  cardImage?: { src: string; alt: string; width: number; height: number };
   heroImage?: { src: string; alt: string };
   heroTagImage?: { src: string; alt: string; width: number; height: number };
   heroTitle: string;
@@ -34,7 +34,7 @@ export const products: Product[] = [
     cardSummary:
       "NanoPrep is a single-component, waterborne acrylic copolymer that reacts and cross-links with rusted steel, clean steel, painted surfaces, aluminium and galvanised steel to deliver superior corrosion protection.",
     cardFeatures: ["No Blasting", "No VOCs", "Non-Flammable", "Eco-Friendly"],
-    cardImage: { src: "/images/Products/NanoPrep.jpg", alt: "NanoPrep applied to a primed structural steel beam" },
+    cardImage: { src: "/images/Products/NanoPrep.jpg", alt: "NanoPrep applied to a primed structural steel beam", width: 800, height: 720 },
     heroImage: { src: "/images/Products/nanoprepbanner.jpg", alt: "NanoPrep applied to the roof of a large storage tank" },
     heroTagImage: { src: "/images/Products/nanoprep-logo-tag.png", alt: "NanoPrep", width: 360, height: 196 },
     heroTitle: "NanoPrep — Rust Primer & Anticorrosive Coating",
@@ -124,7 +124,7 @@ export const products: Product[] = [
     cardSummary:
       "The approved topcoat for NanoPrep, R230 TopCoat is a single-pack, self-cross-linking water-based industrial coating that provides excellent surface and UV protection with a durable mid-gloss finish.",
     cardFeatures: ["UV Resistant", "Single Pack", "Durable Finish", "Waterbased"],
-    cardImage: { src: "/images/Products/R230.jpg", alt: "R230 TopCoat applied to structural steel beams" },
+    cardImage: { src: "/images/Products/R230.jpg", alt: "R230 TopCoat applied to structural steel beams", width: 800, height: 670 },
     heroImage: { src: "/images/Products/r230prod.jpg", alt: "R230 TopCoat applied to the roof of a large storage tank" },
     heroTagImage: {
       src: "/images/Products/rezitech-r230-topcoat.png",
@@ -226,7 +226,7 @@ export const products: Product[] = [
       "Belzona metal repair composites restore worn, corroded and damaged assets without welding or other hot work. Applied and cured in situ, they rebuild lost metal, restore original profiles and provide durable resistance to corrosion, erosion, impact and chemical attack.",
     cardFeatures: ["No Hot Work", "In-Situ Repair", "Machinable Finish", "Long-Term Protection"],
     cardHref: "https://rezitech.com.au/products/belzona-protective-coatings/",
-    cardImage: { src: "/images/Products/Belzona.jpg", alt: "Belzona 1111 being applied to repair corroded structural steel" },
+    cardImage: { src: "/images/Products/Belzona.jpg", alt: "Belzona 1111 being applied to repair corroded structural steel", width: 800, height: 720 },
     heroImage: { src: "/images/Products/Belzona.jpg", alt: "Belzona 1111 being applied to repair corroded structural steel" },
     heroTitle: "Belzona 1111 (Super Metal)",
     heroSub:

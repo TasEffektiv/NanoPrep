@@ -14,10 +14,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .cardImage {
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .imagePlaceholder {
@@ -133,6 +136,5 @@
 
   .image {
     min-height: 0;
-    aspect-ratio: 6 / 5;
   }
 }

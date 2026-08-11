@@ -11,7 +11,8 @@ export default function ProductCard({ product }: { product: Product }) {
           <Image
             src={product.cardImage.src}
             alt={product.cardImage.alt}
-            fill
+            width={product.cardImage.width}
+            height={product.cardImage.height}
             sizes="(min-width: 800px) 380px, 100vw"
             className={styles.cardImage}
           />
