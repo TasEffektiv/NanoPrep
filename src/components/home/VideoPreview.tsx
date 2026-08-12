@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./VideoPreview.module.css";
 
 const videos = [
@@ -10,22 +10,7 @@ const videos = [
 ];
 
 export default function VideoPreview() {
-  const [activeVideo, setActiveVideo] = useState<(typeof videos)[number] | null>(null);
-
-  useEffect(() => {
-    if (!activeVideo) return;
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActiveVideo(null);
-    };
-    document.addEventListener("keydown", onKeyDown);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [activeVideo]);
+  const [playingId, setPlayingId] = useState<string | null>(null);
 
   return (
     <section className={styles.section} id="video">
@@ -37,49 +22,36 @@ export default function VideoPreview() {
         </p>
         <div className={styles.grid}>
           {videos.map((video) => (
-            <button
-              key={video.id}
-              type="button"
-              className={styles.card}
-              onClick={() => setActiveVideo(video)}
-              aria-label={`Play video: ${video.title}`}
-            >
+            <div key={video.id} className={styles.card}>
               <div className={styles.thumb}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt="" loading="lazy" />
-                <div className={styles.overlay} />
-                <span className={styles.playBadge} aria-hidden="true">
-                  ▶
-                </span>
+                {playingId === video.id ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    className={styles.playButton}
+                    onClick={() => setPlayingId(video.id)}
+                    aria-label={`Play video: ${video.title}`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt="" loading="lazy" />
+                    <div className={styles.overlay} />
+                    <span className={styles.playBadge} aria-hidden="true">
+                      ▶
+                    </span>
+                  </button>
+                )}
               </div>
               <div className={styles.titleBar}>{video.title}</div>
-            </button>
+            </div>
           ))}
         </div>
       </div>
-
-      {activeVideo && (
-        <div className={styles.modalBackdrop} onClick={() => setActiveVideo(null)}>
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className={styles.modalClose}
-              onClick={() => setActiveVideo(null)}
-              aria-label="Close video"
-            >
-              ✕
-            </button>
-            <div className={styles.modalPlayer}>
-              <iframe
-                src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1`}
-                title={activeVideo.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

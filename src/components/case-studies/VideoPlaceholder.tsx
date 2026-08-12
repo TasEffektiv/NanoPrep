@@ -1,40 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./VideoPlaceholder.module.css";
-
-function VideoModal({ videoId, title, onClose }: { videoId: string; title: string; onClose: () => void }) {
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", onKeyDown);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [onClose]);
-
-  return (
-    <div className={styles.modalBackdrop} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <button type="button" className={styles.modalClose} onClick={onClose} aria-label="Close video">
-          ✕
-        </button>
-        <div className={styles.modalPlayer}>
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-            title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function InlineVideo({
   heading,
@@ -47,7 +14,7 @@ export function InlineVideo({
   caption: string;
   videoId?: string;
 }) {
-  const [open, setOpen] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
   return (
     <div className={styles.inlineGroup}>
@@ -56,11 +23,20 @@ export function InlineVideo({
         <h3>{heading}</h3>
       </div>
       {videoId ? (
-        <>
+        playing ? (
+          <div className={styles.inlinePlayer}>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              title={label}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : (
           <button
             type="button"
             className={styles.inlineThumb}
-            onClick={() => setOpen(true)}
+            onClick={() => setPlaying(true)}
             aria-label={`Play video: ${label}`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -71,8 +47,7 @@ export function InlineVideo({
             </span>
             <span className={styles.inlineThumbCaption}>{caption}</span>
           </button>
-          {open && <VideoModal videoId={videoId} title={label} onClose={() => setOpen(false)} />}
-        </>
+        )
       ) : (
         <div className={styles.inlineBody}>
           <div className={styles.playIcon} aria-hidden="true">
@@ -87,7 +62,7 @@ export function InlineVideo({
 }
 
 export function FeaturedVideo({ label, caption, videoId }: { label: string; caption: string; videoId?: string }) {
-  const [open, setOpen] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
   return (
     <div className={styles.featuredPanel}>
@@ -96,11 +71,20 @@ export function FeaturedVideo({ label, caption, videoId }: { label: string; capt
         <span>{label}</span>
       </div>
       {videoId ? (
-        <>
+        playing ? (
+          <div className={styles.featuredPlayer}>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              title={label}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : (
           <button
             type="button"
             className={styles.featuredThumb}
-            onClick={() => setOpen(true)}
+            onClick={() => setPlaying(true)}
             aria-label={`Play video: ${label}`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -110,8 +94,7 @@ export function FeaturedVideo({ label, caption, videoId }: { label: string; capt
               ▶
             </span>
           </button>
-          {open && <VideoModal videoId={videoId} title={label} onClose={() => setOpen(false)} />}
-        </>
+        )
       ) : (
         <div className={styles.featuredBody}>
           <div className={styles.featuredPlayIcon} aria-hidden="true">
