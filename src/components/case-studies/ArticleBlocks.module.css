@@ -145,6 +145,25 @@
   flex-shrink: 0;
 }
 
+.textVideoSplit {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.textVideoSplitText h2:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 800px) {
+  .textVideoSplit {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .specTable {
   width: 100%;
   border-collapse: collapse;

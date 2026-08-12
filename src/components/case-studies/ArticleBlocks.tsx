@@ -81,6 +81,29 @@ export default function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
               />
             );
 
+          case "textVideoSplit":
+            return (
+              <div key={key} className={styles.textVideoSplit}>
+                <div className={styles.textVideoSplitText}>
+                  {block.content.map((item, itemIndex) =>
+                    item.type === "heading" ? (
+                      <h2 key={itemIndex}>{item.text}</h2>
+                    ) : (
+                      <p key={itemIndex}>{item.text}</p>
+                    )
+                  )}
+                </div>
+                <div className={styles.textVideoSplitVideo}>
+                  <InlineVideo
+                    heading={block.video.heading}
+                    label={block.video.label}
+                    caption={block.video.caption}
+                    videoId={block.video.videoId}
+                  />
+                </div>
+              </div>
+            );
+
           case "featuredVideo":
             return <FeaturedVideo key={key} label={block.label} caption={block.caption} videoId={block.videoId} />;
 

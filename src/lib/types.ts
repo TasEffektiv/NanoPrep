@@ -55,6 +55,11 @@ export type ArticleBlock =
     }
   | { type: "photoGallery"; images: { src: string; alt: string }[]; caption: string }
   | { type: "inlineVideo"; heading: string; label: string; caption: string; videoId?: string }
+  | {
+      type: "textVideoSplit";
+      content: Array<{ type: "heading"; text: string } | { type: "paragraph"; text: string }>;
+      video: { heading: string; label: string; caption: string; videoId?: string };
+    }
   | { type: "featuredVideo"; label: string; caption: string; videoId?: string }
   | { type: "testimonial"; quote: string; attribution: string }
   | { type: "specTable"; rows: { label: string; value: string }[] };
